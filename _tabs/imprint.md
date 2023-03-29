@@ -1,8 +1,6 @@
 ---
-layout: post
-title: Legal
-date: '2020-03-15 23:07:40'
-tags:
+layout: imprint
+order: 5
 ---
 
 ## According to §5 TMG
