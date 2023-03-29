@@ -1,5 +1,5 @@
 ---
-layout: imprint
+layout: post
 order: 5
 ---
 
