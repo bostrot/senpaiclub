@@ -31,23 +31,4 @@ WSL commands actually return a text with zeros and other non-ascii characters be
 
 If you want to use this tool feel free to. It is open-source on GitHub:
 
-<figure class="kg-card kg-bookmark-card"><a class="kg-bookmark-container" href="https://github.com/bostrot/wsl2-distro-manager"><div class="kg-bookmark-content">
-<div class="kg-bookmark-title">GitHub - bostrot/wsl2-distro-manager: A GUI to quickly manage your WSL2 instances</div>
-<div class="kg-bookmark-description">A GUI to quickly manage your WSL2 instances. Contribute to bostrot/wsl2-distro-manager development by creating an account on GitHub.</div>
-<div class="kg-bookmark-metadata">
-<img class="kg-bookmark-icon" src="https://github.com/fluidicon.png" alt=""><span class="kg-bookmark-author">GitHub</span><span class="kg-bookmark-publisher">bostrot</span>
-</div>
-</div>
-<div class="kg-bookmark-thumbnail"><img src="https://opengraph.githubassets.com/0469aa9195c64d570a2f5e9695525dceb12fd873cfae38de116346f43aa6c2ed/bostrot/wsl2-distro-manager" alt=""></div></a></figure>
-
-If you want to support this project and keep the application up-to-date automatically you can also buy it on the Windows Store:
-
-<figure class="kg-card kg-bookmark-card"><a class="kg-bookmark-container" href="https://www.microsoft.com/store/productId/9NWS9K95NMJB"><div class="kg-bookmark-content">
-<div class="kg-bookmark-title">Buy WSL Manager - Microsoft Store</div>
-<div class="kg-bookmark-description">A quick way to manage your WSL instances with a GUI.Copy, rename, create, download and use custom rootfs files with WSL in a GUI. Open Source: https://github.com/bostrot/wsl2-distro-manager</div>
-<div class="kg-bookmark-metadata">
-<img class="kg-bookmark-icon" src="https://www.microsoft.com/favicon.ico?v2" alt=""><span class="kg-bookmark-author">Microsoft Store</span>
-</div>
-</div>
-<div class="kg-bookmark-thumbnail"><img src="https://store-images.s-microsoft.com/image/apps.33463.14439271049184353.1a0f309d-b7ae-48ae-a943-2d98923f7b75.081a4f91-70a0-440a-8dcf-5743d50faec2?w=120&amp;h=120&amp;q=60" alt=""></div></a></figure>
-
+<https://github.com/bostrot/wsl2-distro-manager>

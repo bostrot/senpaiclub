@@ -106,11 +106,5 @@ If you really want one you should probably be fast looking at the current world-
 Reservation starts Jul 16th, 10 AM PDT and they say it will start shipping in December 2021.
 
 ## Sources
-<figure class="kg-card kg-bookmark-card"><a class="kg-bookmark-container" href="https://www.steamdeck.com/en/"><div class="kg-bookmark-content">
-<div class="kg-bookmark-title">Introducing Steam Deck</div>
-<div class="kg-bookmark-description">Steam Deck is a powerful handheld gaming PC that delivers the Steam games and features you love.</div>
-<div class="kg-bookmark-metadata">
-<img class="kg-bookmark-icon" src="https://cdn.cloudflare.steamstatic.com/steamdeck/images/favicon-32x32.png" alt=""><span class="kg-bookmark-author">Steam Deck</span>
-</div>
-</div>
-<div class="kg-bookmark-thumbnail"><img src="https://cdn.cloudflare.steamstatic.com/steamdeck/images/steamdeck_social.jpg" alt=""></div></a></figure>
+
+<https://www.steamdeck.com/en/>
