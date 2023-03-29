@@ -23,13 +23,13 @@ Make sure to backup all your data before following this guide.
 
 _To give it some context why I am using a Raspberry PI and not just a TTL to USB converter for doing this you would need to check the Troubleshooting section later in this post. Some commands for unbricking the device/loading uboot onto it are just available for linux or would be tedious to install on Windows. My main operating system is Windows, hence the RPI._
 
-![kitty_GGgk1EDyUi-1](/assets/imgs/2019/12/kitty_GGgk1EDyUi-1.png)
+![kitty_GGgk1EDyUi-1](/assets/img/2019/12/kitty_GGgk1EDyUi-1.png)
 
 If you have a Serial Dongle or any UART device that can read the serial input you can skip this step. The RPi has a UART interface on the GPIO (pins 8 TX, 10 RX) with which you can communicate with the NAS. Before it can do that we have to enable those pins and disable its own console so it won't interfere. `sudo raspi-config` -\> `5 Interfacing Options` -\> `P6 Serial` -\> `No` (for serial console) -\> `Yes` (for serial hardware) should do the trick. Now reboot and you should be able to open a connection with minicom or screen and speed 115200 (`sudo screen /dev/ttyS0 115200`).
 
 ### 2. Connect to the serial interface
 
-| ![IMG_20191223_221904-1](/assets/imgs/2019/12/IMG_20191223_221904-1.jpg) | ![IMG_20191223_221844](/assets/imgs/2019/12/IMG_20191223_221844.jpg) |
+| ![IMG_20191223_221904-1](/assets/img/2019/12/IMG_20191223_221904-1.jpg) | ![IMG_20191223_221844](/assets/img/2019/12/IMG_20191223_221844.jpg) |
 | --- | --- |
 
 Remove the sticker from the backside of the NAS and connect TX-\>RX, RX-\>TX, GND-\>GND. When plugging in the power cable you should see something similar like this in the serial console:
@@ -99,7 +99,7 @@ _This actually sets the bootcommand to first start the usb interface then load t
 
 Now you should get a screen like the following:
 
-![nas Debian installer](/assets/imgs/2019/12/kitty_2LuXAhfwMP.png)
+![nas Debian installer](/assets/img/2019/12/kitty_2LuXAhfwMP.png)
 
 Set up debian as you normally would and select your desired install location. I picked the USB stick itself as the location for the main OS. Your USB stick should have at least 1 GB of storage and preferably should be sacrificable. Now, wait for the installation to finish.
 
@@ -116,7 +116,7 @@ Try another USB stick as the NAS is _very_ picky and some newer ones may not wor
 **Make it cleaner**  
 For esthetics, I directly soldered it to the board. In my case, it was a USB Stick 2.0 so I decided to attach it at the front USB to spare the two USB 3.0 ports on the back. I know, this is by far no perfect soldering and gluing job but it works.
 
-![IMG_20191223_202742-2](/assets/imgs/2019/12/IMG_20191223_202742-2.jpg)
+![IMG_20191223_202742-2](/assets/img/2019/12/IMG_20191223_202742-2.jpg)
 
 **Bricked device**  
 If you still get an output on the serial port you might be able to unbrick the NAS with re-flashing the uboot image. Especially when you get stuck at `Net: egiga0 [PRIME]`. Get the latest uboot from the Netgear download site by extracting the [RAIDiator file](https://www.downloads.netgear.com/files/GDC/RND2110/RAIDiator-arm-5.3.13.zip). Get kwboot (on Linux `apt install u-boot-tools`) and run `kwboot -b uboot.bin -t /dev/ttyS0 -p` (/dev/ttyS0 for RPi). Now turn the NAS on and it should boot the uboot image.  

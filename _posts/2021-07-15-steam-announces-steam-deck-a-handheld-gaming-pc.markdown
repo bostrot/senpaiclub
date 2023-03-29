@@ -27,9 +27,9 @@ Despite all that, Steam announced this device would use Linux as its OS. This wi
 
 End Note.
 
-<figure class="kg-card kg-image-card"><img src="/assets/imgs/2021/07/image-4.png" class="kg-image" alt loading="lazy" width="1348" height="892" srcset="/assets/imgs/size/w600/2021/07/image-4.png 600w,/assets/imgs/size/w1000/2021/07/image-4.png 1000w,/assets/imgs/2021/07/image-4.png 1348w" sizes="(min-width: 720px) 720px"></figure>
+<figure class="kg-card kg-image-card"><img src="/assets/img/2021/07/image-4.png" class="kg-image" alt loading="lazy" width="1348" height="892" srcset="/assets/img/size/w600/2021/07/image-4.png 600w,/assets/img/size/w1000/2021/07/image-4.png 1000w,/assets/img/2021/07/image-4.png 1348w" sizes="(min-width: 720px) 720px"></figure>
 
-<figure class="kg-card kg-image-card"><img src="/assets/imgs/2021/07/image-5.png" class="kg-image" alt loading="lazy" width="786" height="1105" srcset="/assets/imgs/size/w600/2021/07/image-5.png 600w,/assets/imgs/2021/07/image-5.png 786w" sizes="(min-width: 720px) 720px"></figure>
+<figure class="kg-card kg-image-card"><img src="/assets/img/2021/07/image-5.png" class="kg-image" alt loading="lazy" width="786" height="1105" srcset="/assets/img/size/w600/2021/07/image-5.png 600w,/assets/img/2021/07/image-5.png 786w" sizes="(min-width: 720px) 720px"></figure>
 
 ### Specs:
 
@@ -83,7 +83,7 @@ Size 298mm x 117mm x 49mmWeightApprox. 669 grams
 
 Operating SystemSteamOS 3.0 (Arch-based)DesktopKDE Plasma
 
-<figure class="kg-card kg-image-card"><img src="/assets/imgs/2021/07/image-6.png" class="kg-image" alt loading="lazy" width="850" height="341" srcset="/assets/imgs/size/w600/2021/07/image-6.png 600w,/assets/imgs/2021/07/image-6.png 850w" sizes="(min-width: 720px) 720px"></figure>
+<figure class="kg-card kg-image-card"><img src="/assets/img/2021/07/image-6.png" class="kg-image" alt loading="lazy" width="850" height="341" srcset="/assets/img/size/w600/2021/07/image-6.png 600w,/assets/img/2021/07/image-6.png 850w" sizes="(min-width: 720px) 720px"></figure>
 
 Sold seperately, there is also a Dock you can get for the Steam Deck with following specs.
 

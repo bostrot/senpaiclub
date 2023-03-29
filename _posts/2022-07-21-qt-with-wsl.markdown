@@ -34,7 +34,7 @@ Then qtcreator:
 
 Now we could try to start it but it will only show errors as there is currently no display connected. In order to get a display working, we can install an xserver variant on windows. I used VcXsrv as it includes creating firewall entries automatically. &nbsp;You can find the source [here](/p/d8013e24-f288-4384-8c2e-7386aeaa9a0f/VcXsrv%20Windows%20X%20Server%20download%20|%20SourceForge.net). After installing, start it with XLaunch, accept the firewall entries (if prompted) and go through the setup: `display number: 0`, `Start no client` and select `Disable access control`. Now you should be good to go back to the WSL console and start qtcreator on your windows host with `qtcreator`:
 
-<figure class="kg-card kg-image-card"><img src="/assets/imgs/2021/01/image.png" class="kg-image" alt loading="lazy" width="1482" height="797" srcset="/assets/imgs/size/w600/2021/01/image.png 600w,/assets/imgs/size/w1000/2021/01/image.png 1000w,/assets/imgs/2021/01/image.png 1482w" sizes="(min-width: 720px) 720px"></figure><figure class="kg-card kg-image-card"><img src="/assets/imgs/2021/01/image-1.png" class="kg-image" alt loading="lazy" width="2000" height="1085" srcset="/assets/imgs/size/w600/2021/01/image-1.png 600w,/assets/imgs/size/w1000/2021/01/image-1.png 1000w,/assets/imgs/size/w1600/2021/01/image-1.png 1600w,/assets/imgs/2021/01/image-1.png 2056w" sizes="(min-width: 720px) 720px"></figure>
+<figure class="kg-card kg-image-card"><img src="/assets/img/2021/01/image.png" class="kg-image" alt loading="lazy" width="1482" height="797" srcset="/assets/img/size/w600/2021/01/image.png 600w,/assets/img/size/w1000/2021/01/image.png 1000w,/assets/img/2021/01/image.png 1482w" sizes="(min-width: 720px) 720px"></figure><figure class="kg-card kg-image-card"><img src="/assets/img/2021/01/image-1.png" class="kg-image" alt loading="lazy" width="2000" height="1085" srcset="/assets/img/size/w600/2021/01/image-1.png 600w,/assets/img/size/w1000/2021/01/image-1.png 1000w,/assets/img/size/w1600/2021/01/image-1.png 1600w,/assets/img/2021/01/image-1.png 2056w" sizes="(min-width: 720px) 720px"></figure>
 
 Now the Qt creator compiler settings ( `Tools -> Options -> Kits`):
 
@@ -49,7 +49,7 @@ Path: `/usr/local/oecore-x86_64/sysroots/x86_64-oesdk-linux/usr/bin/arm-oe-linux
 Name: `rM GDB`  
 Path: `/usr/local/oecore-x86_64/sysroots/x86_64-oesdk-linux/usr/bin/arm-oe-linux-gnueabi/arm-oe-linux-gnueabi-gdb`
 - Kits:  
- ![qt-wsl-settings-1](/assets/imgs/2021/01/qt-wsl-settings-1.png)
+ ![qt-wsl-settings-1](/assets/img/2021/01/qt-wsl-settings-1.png)
 <!--kg-card-end: markdown-->
 
 Now add your device directly:

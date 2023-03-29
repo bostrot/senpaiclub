@@ -37,7 +37,7 @@ Now go to %LOCALAPPDATA%\Microsoft\OneDrive{OneDriveVersion}\adm and copy the On
 
 Open the local group policy editor (e.g. with WIN+R and gpedit.msc) and select ?`Computer Configuration -> Administrative Templates -> All Settings`. Now find `Exclude specific kinds of files from being uploaded`.
 
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="/assets/imgs/2021/02/image.png" class="kg-image" alt loading="lazy" width="1527" height="976" srcset="/assets/imgs/size/w600/2021/02/image.png 600w,/assets/imgs/size/w1000/2021/02/image.png 1000w,/assets/imgs/2021/02/image.png 1527w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown-->
+<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="/assets/img/2021/02/image.png" class="kg-image" alt loading="lazy" width="1527" height="976" srcset="/assets/img/size/w600/2021/02/image.png 600w,/assets/img/size/w1000/2021/02/image.png 1000w,/assets/img/2021/02/image.png 1527w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown-->
 
 Now on `Keywords: Show...` you can add keywords for files to exclude from being uploaded. Just type the name of the file you want to ignore or like in the description use `*` as a wildcard to select multiple filetypes or names.
 

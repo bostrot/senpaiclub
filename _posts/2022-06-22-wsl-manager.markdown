@@ -5,7 +5,7 @@ date: '2022-06-22 15:03:45'
 tags:
 ---
 
-<figure class="kg-card kg-image-card"><img src="/assets/imgs/2022/06/wsl_screen_whole_framed.png" class="kg-image" alt loading="lazy" width="2000" height="1334" srcset="/assets/imgs/size/w600/2022/06/wsl_screen_whole_framed.png 600w,/assets/imgs/size/w1000/2022/06/wsl_screen_whole_framed.png 1000w,/assets/imgs/size/w1600/2022/06/wsl_screen_whole_framed.png 1600w,/assets/imgs/2022/06/wsl_screen_whole_framed.png 2188w" sizes="(min-width: 720px) 720px"></figure>
+<figure class="kg-card kg-image-card"><img src="/assets/img/2022/06/wsl_screen_whole_framed.png" class="kg-image" alt loading="lazy" width="2000" height="1334" srcset="/assets/img/size/w600/2022/06/wsl_screen_whole_framed.png 600w,/assets/img/size/w1000/2022/06/wsl_screen_whole_framed.png 1000w,/assets/img/size/w1600/2022/06/wsl_screen_whole_framed.png 1600w,/assets/img/2022/06/wsl_screen_whole_framed.png 2188w" sizes="(min-width: 720px) 720px"></figure>
 
 <!--kg-card-begin: html-->
 [<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 864 312" enable-background="new 0 0 864 312" xml:space="preserve" style="transform: scale(0.3)">

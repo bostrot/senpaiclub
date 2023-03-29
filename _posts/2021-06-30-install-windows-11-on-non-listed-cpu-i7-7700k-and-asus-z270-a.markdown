@@ -27,7 +27,7 @@ Restart and that should be it. Open Windows Settings -\> Updates -\> Windows-Ins
 
 Although following screenshot is in German you will probably get the idea:
 
-<figure class="kg-card kg-image-card kg-card-hascaption"><img src="/assets/imgs/2021/06/image.png" class="kg-image" alt loading="lazy" width="1200" height="928" srcset="/assets/imgs/size/w600/2021/06/image.png 600w,/assets/imgs/size/w1000/2021/06/image.png 1000w,/assets/imgs/2021/06/image.png 1200w" sizes="(min-width: 720px) 720px"><figcaption>Choose the Dev Channel to receive the insider preview.</figcaption></figure><figure class="kg-card kg-image-card kg-card-hascaption"><img src="/assets/imgs/2021/07/image-3.png" class="kg-image" alt loading="lazy" width="842" height="856" srcset="/assets/imgs/size/w600/2021/07/image-3.png 600w,/assets/imgs/2021/07/image-3.png 842w" sizes="(min-width: 720px) 720px"><figcaption>System Info after updating to Windows 11</figcaption></figure>
+<figure class="kg-card kg-image-card kg-card-hascaption"><img src="/assets/img/2021/06/image.png" class="kg-image" alt loading="lazy" width="1200" height="928" srcset="/assets/img/size/w600/2021/06/image.png 600w,/assets/img/size/w1000/2021/06/image.png 1000w,/assets/img/2021/06/image.png 1200w" sizes="(min-width: 720px) 720px"><figcaption>Choose the Dev Channel to receive the insider preview.</figcaption></figure><figure class="kg-card kg-image-card kg-card-hascaption"><img src="/assets/img/2021/07/image-3.png" class="kg-image" alt loading="lazy" width="842" height="856" srcset="/assets/img/size/w600/2021/07/image-3.png 600w,/assets/img/2021/07/image-3.png 842w" sizes="(min-width: 720px) 720px"><figcaption>System Info after updating to Windows 11</figcaption></figure>
 
 Have fun. Updates following...
 

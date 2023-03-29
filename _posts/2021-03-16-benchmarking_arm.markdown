@@ -29,7 +29,7 @@ This will run geekbench on your device, upload the results to their site and giv
 
 As for my passively-cooled Raspberry Pi 4:
 
-<figure class="kg-card kg-image-card"><img src="/assets/imgs/2021/03/image.png" class="kg-image" alt loading="lazy" width="1107" height="82" srcset="/assets/imgs/size/w600/2021/03/image.png 600w,/assets/imgs/size/w1000/2021/03/image.png 1000w,/assets/imgs/2021/03/image.png 1107w" sizes="(min-width: 720px) 720px"></figure>
+<figure class="kg-card kg-image-card"><img src="/assets/img/2021/03/image.png" class="kg-image" alt loading="lazy" width="1107" height="82" srcset="/assets/img/size/w600/2021/03/image.png 600w,/assets/img/size/w1000/2021/03/image.png 1000w,/assets/img/2021/03/image.png 1107w" sizes="(min-width: 720px) 720px"></figure>
 
 **Sources:**
 

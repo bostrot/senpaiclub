@@ -9,9 +9,9 @@ tags:
 ---
 
 <figure class="kg-card kg-gallery-card kg-width-wide"><div class="kg-gallery-container"><div class="kg-gallery-row">
-<div class="kg-gallery-image"><img src="/assets/imgs/2020/01/IMG_20200102_134706.jpg" width="2000" height="1500" loading="lazy" alt srcset="/assets/imgs/size/w600/2020/01/IMG_20200102_134706.jpg 600w,/assets/imgs/size/w1000/2020/01/IMG_20200102_134706.jpg 1000w,/assets/imgs/size/w1600/2020/01/IMG_20200102_134706.jpg 1600w,/assets/imgs/size/w2400/2020/01/IMG_20200102_134706.jpg 2400w" sizes="(min-width: 720px) 720px"></div>
-<div class="kg-gallery-image"><img src="/assets/imgs/2020/01/IMG_20200102_134650.jpg" width="2000" height="1500" loading="lazy" alt srcset="/assets/imgs/size/w600/2020/01/IMG_20200102_134650.jpg 600w,/assets/imgs/size/w1000/2020/01/IMG_20200102_134650.jpg 1000w,/assets/imgs/size/w1600/2020/01/IMG_20200102_134650.jpg 1600w,/assets/imgs/size/w2400/2020/01/IMG_20200102_134650.jpg 2400w" sizes="(min-width: 720px) 720px"></div>
-<div class="kg-gallery-image"><img src="/assets/imgs/2020/01/IMG_20200102_134643-1.jpg" width="2000" height="1500" loading="lazy" alt srcset="/assets/imgs/size/w600/2020/01/IMG_20200102_134643-1.jpg 600w,/assets/imgs/size/w1000/2020/01/IMG_20200102_134643-1.jpg 1000w,/assets/imgs/size/w1600/2020/01/IMG_20200102_134643-1.jpg 1600w,/assets/imgs/size/w2400/2020/01/IMG_20200102_134643-1.jpg 2400w" sizes="(min-width: 720px) 720px"></div>
+<div class="kg-gallery-image"><img src="/assets/img/2020/01/IMG_20200102_134706.jpg" width="2000" height="1500" loading="lazy" alt srcset="/assets/img/size/w600/2020/01/IMG_20200102_134706.jpg 600w,/assets/img/size/w1000/2020/01/IMG_20200102_134706.jpg 1000w,/assets/img/size/w1600/2020/01/IMG_20200102_134706.jpg 1600w,/assets/img/size/w2400/2020/01/IMG_20200102_134706.jpg 2400w" sizes="(min-width: 720px) 720px"></div>
+<div class="kg-gallery-image"><img src="/assets/img/2020/01/IMG_20200102_134650.jpg" width="2000" height="1500" loading="lazy" alt srcset="/assets/img/size/w600/2020/01/IMG_20200102_134650.jpg 600w,/assets/img/size/w1000/2020/01/IMG_20200102_134650.jpg 1000w,/assets/img/size/w1600/2020/01/IMG_20200102_134650.jpg 1600w,/assets/img/size/w2400/2020/01/IMG_20200102_134650.jpg 2400w" sizes="(min-width: 720px) 720px"></div>
+<div class="kg-gallery-image"><img src="/assets/img/2020/01/IMG_20200102_134643-1.jpg" width="2000" height="1500" loading="lazy" alt srcset="/assets/img/size/w600/2020/01/IMG_20200102_134643-1.jpg 600w,/assets/img/size/w1000/2020/01/IMG_20200102_134643-1.jpg 1000w,/assets/img/size/w1600/2020/01/IMG_20200102_134643-1.jpg 1600w,/assets/img/size/w2400/2020/01/IMG_20200102_134643-1.jpg 2400w" sizes="(min-width: 720px) 720px"></div>
 </div></div></figure><!--kg-card-begin: markdown-->
 
 If you have ever needed some extra keys on your keyboard for easier to reach shortcuts or automation you probably heard about macro keyboards.
@@ -36,7 +36,7 @@ Now the steps are pretty forward. I soldered some cables quick and dirty to the 
 
 If you are using another Arduino you should checkout how to reflash the firmware to act as an HID device. Arduino itself has an [article](https://www.arduino.cc/en/Reference/HID) about it in their references.
 
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="/assets/imgs/2020/03/IMG_20200313_220212-01.jpeg" class="kg-image" alt loading="lazy"></figure><!--kg-card-begin: html-->
+<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="/assets/img/2020/03/IMG_20200313_220212-01.jpeg" class="kg-image" alt loading="lazy"></figure><!--kg-card-begin: html-->
 
     
     int button[5];

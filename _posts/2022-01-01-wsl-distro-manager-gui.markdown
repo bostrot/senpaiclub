@@ -15,7 +15,7 @@ If you are developing different software that was built on different machines or
 
 That is why I created a little tool that might help you with a GUI to control your instances a little better.
 
-<figure class="kg-card kg-image-card"><img src="/assets/imgs/2022/01/image.png" class="kg-image" alt loading="lazy" width="795" height="618" srcset="/assets/imgs/size/w600/2022/01/image.png 600w,/assets/imgs/2022/01/image.png 795w" sizes="(min-width: 720px) 720px"></figure>
+<figure class="kg-card kg-image-card"><img src="/assets/img/2022/01/image.png" class="kg-image" alt loading="lazy" width="795" height="618" srcset="/assets/img/size/w600/2022/01/image.png 600w,/assets/img/2022/01/image.png 795w" sizes="(min-width: 720px) 720px"></figure>
 
 As the name states this tool allows you to manage your instances with a GUI, quickly create new instances, stop, delete or customize them.
 
@@ -23,7 +23,7 @@ Interestingly Windows does not allow you to install a specific distro twice with
 
 For better management, you can also rename your instance labels in this instance without needing to recreate them.
 
-<figure class="kg-card kg-image-card"><img src="/assets/imgs/2022/01/image-1.png" class="kg-image" alt loading="lazy" width="795" height="618" srcset="/assets/imgs/size/w600/2022/01/image-1.png 600w,/assets/imgs/2022/01/image-1.png 795w" sizes="(min-width: 720px) 720px"></figure>
+<figure class="kg-card kg-image-card"><img src="/assets/img/2022/01/image-1.png" class="kg-image" alt loading="lazy" width="795" height="618" srcset="/assets/img/size/w600/2022/01/image-1.png 600w,/assets/img/2022/01/image-1.png 795w" sizes="(min-width: 720px) 720px"></figure>
 
 While creating this tool I came across some interesting Windows-Like behavior with WSL and I just wanted to share that:
 

@@ -12,11 +12,11 @@ tags:
 <img class="kg-bookmark-icon" src="/favicon.png" alt=""><span class="kg-bookmark-author">Senpai.Club</span><span class="kg-bookmark-publisher">Eric</span>
 </div>
 </div>
-<div class="kg-bookmark-thumbnail"><img src="/assets/imgs/2020/04/clubwallpaper-3.svg" alt=""></div></a></figure><figure class="kg-card kg-bookmark-card"><a class="kg-bookmark-container" href="/max"><div class="kg-bookmark-content">
+<div class="kg-bookmark-thumbnail"><img src="/assets/img/2020/04/clubwallpaper-3.svg" alt=""></div></a></figure><figure class="kg-card kg-bookmark-card"><a class="kg-bookmark-container" href="/max"><div class="kg-bookmark-content">
 <div class="kg-bookmark-title">“Max Senpai”</div>
 <div class="kg-bookmark-description">Founder of Senpai.club</div>
 <div class="kg-bookmark-metadata">
 <img class="kg-bookmark-icon" src="/favicon.png" alt=""><span class="kg-bookmark-author">Senpai.Club</span><span class="kg-bookmark-publisher">Max Senpai</span>
 </div>
 </div>
-<div class="kg-bookmark-thumbnail"><img src="/assets/imgs/2020/04/Banner-Staff.png" alt=""></div></a></figure>
+<div class="kg-bookmark-thumbnail"><img src="/assets/img/2020/04/Banner-Staff.png" alt=""></div></a></figure>

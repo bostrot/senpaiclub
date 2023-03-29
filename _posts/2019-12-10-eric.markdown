@@ -11,8 +11,8 @@ _hey, my name is Eric Trenkel, I was born in Germany and grew up partly in Austr
 My Home Lab and the Senpai.Club infrastructure:
 
 <figure class="kg-card kg-gallery-card kg-width-wide"><div class="kg-gallery-container"><div class="kg-gallery-row">
-<div class="kg-gallery-image"><img src="/assets/imgs/2021/03/server_front.jpg" width="640" height="853" loading="lazy" alt srcset="/assets/imgs/size/w600/2021/03/server_front.jpg 600w,/assets/imgs/2021/03/server_front.jpg 640w"></div>
-<div class="kg-gallery-image"><img src="/assets/imgs/2021/03/server_back.jpg" width="640" height="853" loading="lazy" alt srcset="/assets/imgs/size/w600/2021/03/server_back.jpg 600w,/assets/imgs/2021/03/server_back.jpg 640w"></div>
+<div class="kg-gallery-image"><img src="/assets/img/2021/03/server_front.jpg" width="640" height="853" loading="lazy" alt srcset="/assets/img/size/w600/2021/03/server_front.jpg 600w,/assets/img/2021/03/server_front.jpg 640w"></div>
+<div class="kg-gallery-image"><img src="/assets/img/2021/03/server_back.jpg" width="640" height="853" loading="lazy" alt srcset="/assets/img/size/w600/2021/03/server_back.jpg 600w,/assets/img/2021/03/server_back.jpg 640w"></div>
 </div></div></figure>
 
 As for how Senpai.Club works:
