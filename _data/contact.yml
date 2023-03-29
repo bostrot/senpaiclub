@@ -3,12 +3,21 @@
 - type: github
   icon: "fab fa-github"
 
-- type: twitter
-  icon: "fab fa-twitter"
+# homepag
+- type: homepage
+  icon: "fas fa-home"
+  url:  'https://erictrenkel.com' # Fill with your homepage
+
+- type: linkedin
+  icon: "fab fa-linkedin"
 
 - type: email
   icon: "fas fa-envelope"
   noblank: true # open link in current tab
+
+# - type: stack-overflow
+#   icon: 'fab fa-stack-overflow'
+#   url:  'https://stackoverflow.com/users/5237072/bostrot' # Fill with your stackoverflow homepage
 
 - type: rss
   icon: "fas fa-rss"
@@ -23,6 +32,3 @@
 #   icon: 'fab fa-linkedin'   # icons powered by <https://fontawesome.com/>
 #   url:  ''                  # Fill with your Linkedin homepage
 #
-# - type: stack-overflow
-#   icon: 'fab fa-stack-overflow'
-#   url:  ''                  # Fill with your stackoverflow homepage

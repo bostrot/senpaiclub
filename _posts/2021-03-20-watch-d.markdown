@@ -1,0 +1,38 @@
+---
+layout: post
+title: 'Watch Dogs: Legion PC Multiplayer released'
+date: '2021-03-20 10:17:28'
+tags:
+- gaming
+- watch-dogs-legion
+- release
+---
+
+Just a short update that Watch Dogs: Legion PC multiplayer was just released without any notice with the latest update. Earlier this month they postponed the multiplayer mode for PC again reasoning that there were some errors that might crash PCs with certain GPUs.
+
+Here is the original message:
+
+‌
+
+> A message from the Watch Dogs: Legion team about the Online Mode: [pic.twitter.com/VVeaZ7v7yb](https://t.co/VVeaZ7v7yb)— Watch Dogs: Legion (@watchdogsgame) [March 5, 2021](https://twitter.com/watchdogsgame/status/1367928214824378368?ref_src=twsrc%5Etfw) Embedded JavaScript
+
+- 
+- 
+- ‌
+
+The Watch Dogs: Legion team's message about the PC multiplayer release:
+
+‌
+
+> DedSec, the Online Mode of Watch Dogs: Legion for PC launches today! We are deploying TU 3.22 right now and Online will unlock at 11 AM EDT, 8 AM PDT, 3 PM GMT, 4 PM CET, in ~3 hours from now. Full patch notes and more info can he found here: [https://t.co/rHxSQBjNx8](https://t.co/rHxSQBjNx8) [pic.twitter.com/0lWY1paPvP](https://t.co/0lWY1paPvP)— Watch Dogs: Legion (@watchdogsgame) [March 18, 2021](https://twitter.com/watchdogsgame/status/1372518977457549314?ref_src=twsrc%5Etfw) Embedded JavaScript
+
+- 
+- 
+- ‌
+
+Now we can finally play Watch Dogs: Legion with friends!
+
+Edit 23. March 2021:
+
+Unfortunately there are still some bugs which in my case ended in crashing the Game multiple times - making it unplayble.
+
