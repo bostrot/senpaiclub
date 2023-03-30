@@ -24,16 +24,8 @@ collections:
         name: "about"
         file: "_tabs/about.md"
         fields:
-          - {label: Intro, name: intro, widget: markdown}
-          - label: Team
-            name: team
-            widget: list
-            fields:
-              - {label: Name, name: name, widget: string}
-              - {label: Position, name: position, widget: string}
-              - {label: Photo, name: photo, widget: image}
-              - {label: Bio, name: bio, widget: markdown}
-              - {label: Contact, name: contact, widget: string}
+          - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'about' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
       - label: "Imprint Page"
         name: "imprint"
         file: "_tabs/imprint.md"
