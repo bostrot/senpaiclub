@@ -6,6 +6,7 @@ title: About
 <details>
 <summary>Max Senpai</summary>
 
+<div markdown="1">
 _Max Senpai, real name Maximilian Maerkl, was born in Taipei, Taiwan(R.O.C) and raised in various cities in Austria and Germany. He is fluent in English, German, Spanish, and Mandarin because of his family background. He has been traveling a lot between Europe and Asia and worked as a fundraiser, waiter, bartender, amateur film producer, and_ Emergency Medical Technician (EMT)_. He can be described as a tech enthusiast, travel addict, adrenaline junkie, and humanitarian._
 
 * * *
@@ -25,11 +26,12 @@ TELEGRAM: [https://t.me/RiceRiot](https://t.me/RiceRiot)/
 TWITCH: [https://www.twitch.tv/riceriot](https://www.twitch.tv/riceriot)/  
 STEAM: [https://steamcommunity.com/id/RiceRiot](https://steamcommunity.com/id/RiceRiot)
 
-
+</div>
 </details>
 
 <details>
 <summary>Eric Senpai</summary>
+<div markdown="1">
 
 *hey, my name is Eric Trenkel, I was born in Germany and grew up partly in Austria. I am a tech enthusiast and currently studying computer science at the University of Applied Sciences Aachen.*
 
@@ -69,4 +71,5 @@ Socials:
 </div>
 </div>
 <div class="kg-bookmark-thumbnail"><img src="https://pbs.twimg.com/profile_banners/3309445521/1496860909/1500x500" alt=""></div></a></figure>
+</div>
 </details>
