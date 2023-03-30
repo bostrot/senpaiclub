@@ -3,16 +3,5 @@
 
 <!-- cookieconsent darkmode -->
 <script>
-window
-	.matchMedia("(prefers-color-scheme: dark)")
-	.addEventListener("change", function (e) {
-		const colorScheme = e.matches ? "dark" : "light";
-		console.log(colorScheme);
-
-		if (colorScheme === "dark") {
-			document.body.classList.add('c_darkmode');
-		} else {
-			document.body.classList.remove('c_darkmode');
-		}
-	});
+document.body.classList.toggle('c_darkmode');
 </script>
