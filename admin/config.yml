@@ -1,0 +1,30 @@
+backend:
+  name: github
+  repo: bostrot/senpaiclub
+  branch: main # Branch to update (optional; defaults to master)
+  base_url: https://github-oauth.aachen.dev
+media_folder: 'assets/uploads'
+collections:
+  - name: 'blog'
+    label: 'Blog'
+    folder: '_posts/'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'post' }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'pages'
+    label: 'Pages'
+    folder: '_tabs/'
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'hidden', default: 'about' }
+      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'about' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
