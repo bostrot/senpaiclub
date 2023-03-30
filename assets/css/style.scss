@@ -16,8 +16,12 @@ $tab-count: {{ site.tabs | size | plus: 1 }}; // plus 1 for home tab
     border-radius: 0 !important;
 }
 
+.site-title {
+    display: none !important;
+}
+
 @media (prefers-color-scheme: dark) {
     #sidebar #avatar>a {
-        filter: invert(1);
+        filter: invert(1) !important;
     }
 }
