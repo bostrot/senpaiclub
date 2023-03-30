@@ -42,22 +42,12 @@ My Home Lab and the Senpai.Club infrastructure:
 <div class="kg-gallery-image"><img src="/assets/img/2021/03/server_back.jpg" width="640" height="853" loading="lazy" alt srcset="/assets/img/size/w600/2021/03/server_back.jpg 600w,/assets/img/2021/03/server_back.jpg 640w"></div>
 </div></div></figure>
 
-As for how Senpai.Club works:
-
-~~We are using the CMS Ghost for managing all posts, data and SEO. In front of that a static page hosted with GitLab.
-
-The server itself is a kubernetes cluster with an nginx reverse proxy in front of it that handles the certificate and some other stuff for the Docker container where the CMS runs on. As you are basically opening a static site every time you visit us it needs to be updated regularly.
-
-This is done automatically. Or rather with a CI/CD job: When a post is updated or released the site calls an API endpoint which then fetches all sites from the server and saves them to the GitLab runner. After that the runner runs over the pages and optimizes and edits a few sections. For one all the links are updated so that they really say "senpai.club". It then changes back some API endpoints which are needed for the newsletter signup and some other dynamic functions.
-
-This is basically done twice a day + on every post update. Twice a day because the script for updating the COVID-19 WHO Feed crawls the WHO site twice a day.~~
-
-*You should definitely check out my website erictrenkel.com ;)*
+*You should definitely check out my website, erictrenkel.com ;)*
 
 ## Socials:
   
-https://github.com/bostrot
-https://erictrenkel.com
+<https://github.com/bostrot>\
+<https://erictrenkel.com>
 
 </div>
 </details>
