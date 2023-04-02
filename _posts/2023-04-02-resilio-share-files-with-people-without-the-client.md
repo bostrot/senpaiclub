@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Resilio share files with people without the client
+title: Share files without the Resilio client
 date: 2023-04-02T22:39:51.150Z
 ---
 ![Webserver for fiels](/assets/uploads/screenshot-2023-04-03-010211.png)
