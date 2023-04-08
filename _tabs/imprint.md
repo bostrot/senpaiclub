@@ -1,5 +1,6 @@
 ---
 layout: post
+icon: fas fa-section
 order: 5
 ---
 
@@ -7,15 +8,14 @@ order: 5
 <!--kg-card-begin: markdown-->
 
 Eric Trenkel  
-Office 33658  
-PO Box 6945  
-London, W1A 6US  
-United Kingdom
+Willibrordstraße 1
+52146 Würselen
+Germany
 
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown-->
 ## Contact
 
-Telephone: +1 (919) 432-4159  
+Telephone: +49 (2405) 4079440
 Email: legal@senpai.club
 
 ## Liability for content
