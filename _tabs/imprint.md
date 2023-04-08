@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 icon: fas fa-section
 order: 5
 ---
@@ -7,15 +7,15 @@ order: 5
 ## According to §5 TMG
 <!--kg-card-begin: markdown-->
 
-Eric Trenkel  
-Willibrordstraße 1
-52146 Würselen
+Eric Trenkel\
+Willibrordstraße 1\
+52146 Würselen\
 Germany
 
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown-->
 ## Contact
 
-Telephone: +49 (2405) 4079440
+Telephone: +49 (2405) 4079440\
 Email: legal@senpai.club
 
 ## Liability for content
