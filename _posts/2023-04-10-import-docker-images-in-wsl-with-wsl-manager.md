@@ -13,11 +13,11 @@ WSL2 (Windows Subsystem for Linux) is a powerful tool for developers who want to
 
 That's where `WSL Manager` comes in. This open-source project provides a graphical user interface (GUI) for managing your WSL2 instances, making it easier for users to create, manage, and run Linux environments on Windows. And with the latest update, the project now allows users to pull Docker images and use them as rootfs to create a WSL2 instance, without the need to install Docker desktop.
 
-Before we dive into this new feature, let's first explore what WSL2-distro-manager is and how it can help you manage your WSL2 instances more efficiently.
+Before we dive into this new feature, let's first explore what WSL Manager is and how it can help you manage your WSL2 instances more efficiently.
 
 ## What is WSL2 Manager?
 
-WSL2-distro-manager is a graphical user interface (GUI) for managing your WSL2 instances on Windows 10. The project is open-source, and its code is available on GitHub. The GUI is designed to make it easy for users to manage their WSL2 instances, with features such as:
+WSL Manager is a graphical user interface (GUI) for managing your WSL2 instances on Windows 10. The project is open-source, and its code is available on GitHub. The GUI is designed to make it easy for users to manage their WSL2 instances, with features such as:
 
 * Creating new instances
 * Starting and stopping instances
@@ -27,7 +27,7 @@ WSL2-distro-manager is a graphical user interface (GUI) for managing your WSL2 i
 
 ## The latest update to WSL Manager
 
-With the latest update to WSL2-distro-manager, users can now pull Docker images and use them as rootfs to create a WSL2 instance. This means that you can now use any Docker image as a starting point for your WSL2 instance, without the need to install Docker desktop on your Windows machine.
+With the latest update to WSL Manager, users can now pull Docker images and use them as rootfs to create a WSL2 instance. This means that you can now use any Docker image as a starting point for your WSL2 instance, without the need to install Docker desktop on your Windows machine.
 
 To use this feature, simply enter `dockerhub:alpine:latest` as the rootfs when creating a new instance. The WSL Manager will then pull the image and use it as the rootfs for your new instance.
 
@@ -58,4 +58,4 @@ As an open-source project, WSL Manager is supported by the community. If you wan
 ## Resources
 
 [WSL Manager on GitHub](https://github.com/bostrot/wsl2-distro-manager)\
-[WSL Manager on the Microsoft Store](https://apps.microsoft.com/store/detail/wsl-manager/9NWS9K95NMJB?hl=en-us&gl=us)\
+[WSL Manager on the Microsoft Store](https://apps.microsoft.com/store/detail/wsl-manager/9NWS9K95NMJB?hl=en-us&gl=us)
