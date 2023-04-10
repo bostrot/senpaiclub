@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Import Docker images in WSL with WSL Manager
-date: 2023-04-02T22:39:51.150Z
+date: 2023-04-10T14:44:51.150Z
 ---
 
 WSL2 (Windows Subsystem for Linux) is a powerful tool for developers who want to use Linux applications and tools on their Windows machine without having to dual-boot or set up a virtual machine. However, managing and setting up WSL2 instances can be a bit of a hassle, especially for those who are not familiar with the command-line interface.
