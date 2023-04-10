@@ -10,7 +10,7 @@ That's where `WSL Manager` comes in. This open-source project provides a graphic
 
 Before we dive into this new feature, let's first explore what WSL2-distro-manager is and how it can help you manage your WSL2 instances more efficiently.
 
-## What is WSL2-distro-manager?
+## What is WSL2 Manager?
 
 WSL2-distro-manager is a graphical user interface (GUI) for managing your WSL2 instances on Windows 10. The project is open-source, and its code is available on GitHub. The GUI is designed to make it easy for users to manage their WSL2 instances, with features such as:
 
@@ -20,7 +20,7 @@ WSL2-distro-manager is a graphical user interface (GUI) for managing your WSL2 i
 * Managing instance settings
 * The project is built using Flutter and uses its own API to interact with the WSL2 backend.
 
-## The latest update to WSL2-distro-manager
+## The latest update to WSL Manager
 
 With the latest update to WSL2-distro-manager, users can now pull Docker images and use them as rootfs to create a WSL2 instance. This means that you can now use any Docker image as a starting point for your WSL2 instance, without the need to install Docker desktop on your Windows machine.
 
