@@ -1,8 +1,9 @@
 backend:
-  name: github
+  name: gitlab
   repo: bostrot/senpaiclub
   branch: main # Branch to update (optional; defaults to master)
-  base_url: https://github-oauth.aachen.dev
+  auth_type: pkce # Required for pkce
+  app_id: 16c44dec105f6f32e8f87d0368bc4c4d6b0b1d7c4366518feec18ae57c3b45f3 # Application ID from your GitLab settings
 media_folder: 'assets/uploads'
 collections:
   - name: 'blog'
