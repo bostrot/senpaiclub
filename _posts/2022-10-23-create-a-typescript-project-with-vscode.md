@@ -23,17 +23,17 @@ Create a new folder and change it.
     mkdir project 
     cd project
 
-Then init a NodeJS project with npm which asks you a few things and creates the package.json file afterward.
+Then init a NodeJS project with npm, which asks you a few things and creates the package.json file afterward.
 
     npm init
 
-Then initialize TypeScript which creates the tsconfig.json with your compiler options.
+Then initialize TypeScript, which creates the tsconfig.json with your compiler options.
 
     npx tsc --init
 
 ### VSCode Configuration
 
-Create a &nbsp;.vscode folder and the two files launch.json and tasks.json. By now your folder structure should look something like the following:
+Create a `.vscode` folder and the two files launch.json and tasks.json. By now, your folder structure should look something like the following:
 
     |- .vscode 
       |- launch.json 
@@ -41,7 +41,7 @@ Create a &nbsp;.vscode folder and the two files launch.json and tasks.json. By n
     |- tsconfig.json 
     |- package.json
 
-Now use the following settings for the launch.json and tasks.json files. The launch.json tells VSCode what to do when you start the debugging (F5) and the tasks.json tells it to run TypeScript without tsconfig.json options.
+Now use the following settings for the launch.json and tasks.json files. The launch.json tells VSCode what to do when you start the debugging (F5), and the tasks.json tells it to run TypeScript without tsconfig.json options.
 
 ```json launch.json
 {
@@ -84,11 +84,12 @@ Now use the following settings for the launch.json and tasks.json files. The lau
 
 Now in your package.json file, you should add the dev script so we can start it.
 
-<figure class="kg-card kg-code-card"><pre><code class="language-JSON">"scripts": {
+```json package.json
+"scripts": {
     "test": "echo \"Error: no test specified\" &amp;&amp; exit 1",
     "dev": "ts-node-dev ./src/app.ts"
-}</code></pre>
-<figcaption>package.json</figcaption></figure>
+}
+```
 
 Now if you try the in-build debugger in VSCode you should be able to debug it like any other application.
 
