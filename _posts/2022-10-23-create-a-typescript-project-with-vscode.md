@@ -1,11 +1,11 @@
 ---
 layout: post
-title: 'Part 1: Create a TypeScript project with VSCode'
-date: '2022-10-23 09:16:37'
+title: "Part 1: Create a TypeScript project with VSCode"
+date: 2022-10-23 09:16:37
 tags:
-- tutorial
-- typescript
-- development
+  - tutorial
+  - typescript
+  - development
 ---
 
 It is pretty easy to create a TypeScript project but the problem (at least for me) is the configuration with VSCode in order for the debugger works. Following I have fetched some configuration that helps create a TypeScript project and configure VSCode in order that you can simply use your regular shortcuts to start debugging it.
@@ -43,7 +43,8 @@ Create a &nbsp;.vscode folder and the two files launch.json and tasks.json. By n
 
 Now use the following settings for the launch.json and tasks.json files. The launch.json tells VSCode what to do when you start the debugging (F5) and the tasks.json tells it to run TypeScript without tsconfig.json options.
 
-<figure class="kg-card kg-code-card"><pre><code class="language-JSON">{
+```json launch.json
+{
     "configurations": [
         {
             "name": "Launch via NPM",
@@ -59,8 +60,11 @@ Now use the following settings for the launch.json and tasks.json files. The lau
             "type": "node"
         },
     ]
-}</code></pre>
-<figcaption>launch.json</figcaption></figure><figure class="kg-card kg-code-card"><pre><code class="language-JSON">{
+}
+```
+
+```json tasks.json
+{
     "version": "2.0.0",
     "tasks": [
         {
@@ -75,8 +79,8 @@ Now use the following settings for the launch.json and tasks.json files. The lau
             }
         }
     ]
-}</code></pre>
-<figcaption>tasks.json</figcaption></figure>
+}
+```
 
 Now in your package.json file, you should add the dev script so we can start it.
 
