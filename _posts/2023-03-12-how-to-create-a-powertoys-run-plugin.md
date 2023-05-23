@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to Create a PowerToys Run Plugin
-date: 2023-03-12 22:05:03
+date: 2022-03-12T21:05:00.000Z
 tags:
   - powertoys
   - windows
