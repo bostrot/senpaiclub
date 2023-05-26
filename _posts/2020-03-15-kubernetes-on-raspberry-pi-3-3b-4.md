@@ -1,7 +1,7 @@
 ---
 layout: post
 title: A quick guide for Kubernetes on a Raspberry Pi (3, 3B, 4) cluster
-date: '2020-03-15 21:51:21'
+date: 2020-03-15T09:00:00.000Z
 tags:
 - raspberry-pi
 - kubernetes

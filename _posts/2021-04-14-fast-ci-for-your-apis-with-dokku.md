@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Fast CD with Dokku on Docker
-date: '2021-04-14 22:39:41'
+date: 2021-04-14T09:00:00.000Z
 tags:
 - dokku
 - docker

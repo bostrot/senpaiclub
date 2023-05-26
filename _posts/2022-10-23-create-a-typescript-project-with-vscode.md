@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Part 1: Create a TypeScript project with VSCode"
-date: 2022-10-23 09:16:37
+date: 2022-10-23T09:00:00.000Z
 tags:
   - tutorial
   - typescript
@@ -97,5 +97,5 @@ For the next part, we will look at how to create a docker container that runs th
 
 ### Sources & Ressources
 
-<https://code.visualstudio.com/Docs/languages/>
-<https://code.visualstudio.com/assets/docs/languages/typescript/Languages_typescript.png>
+- **VSCode Language**, [https://code.visualstudio.com/Docs/languages/)](https://code.visualstudio.com/Docs/languages/) (last visited May 26, 2023).
+- **VSCode Typescript**, [https://code.visualstudio.com/assets/docs/languages/typescript/languages_typescript.png](https://code.visualstudio.com/assets/docs/languages/typescript/languages_typescript.png) (last visited May 26, 2023).

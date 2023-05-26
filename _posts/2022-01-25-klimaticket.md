@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Austria's KlimaTicket
-date: '2022-01-25 07:00:00'
+date: 2022-01-25T09:00:00.000Z
 tags:
 - environment
 - education

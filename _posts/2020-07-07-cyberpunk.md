@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Cyberpunk 2077
-date: '2020-07-07 19:43:22'
+date: 2020-07-07T09:00:00.000Z
 tags:
 - gaming
 - cyberpunk

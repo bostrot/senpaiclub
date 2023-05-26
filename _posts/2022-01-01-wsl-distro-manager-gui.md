@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Windows Subsystem for Linux (WSL) Distro Manager GUI
-date: '2022-01-01 16:34:30'
+date: 2022-01-01T09:00:00.000Z
 tags:
 - wsl
 - linux

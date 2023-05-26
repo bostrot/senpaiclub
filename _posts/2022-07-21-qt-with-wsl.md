@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'QT on WSL2: reMarkable coding on Windows'
-date: '2022-07-21 18:53:21'
+date: 2022-07-21T09:00:00.000Z
 tags:
 - wsl
 - qt

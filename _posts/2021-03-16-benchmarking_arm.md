@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Benchmarking single board computers with Geekbench for ARM
-date: '2021-03-16 23:07:32'
+date: 2021-03-16T09:00:00.000Z
 tags:
 - benchmark
 - arm
@@ -33,5 +33,4 @@ As for my passively-cooled Raspberry Pi 4:
 
 **Sources:**
 
-**Geekbench 5.4** , [https://www.geekbench.com/blog/2021/03/geekbench-54/](https://www.geekbench.com/blog/2021/03/geekbench-54/) (last visited Mar. 17, 2021).
-
+**Geekbench 5.4**, [https://www.geekbench.com/blog/2021/03/geekbench-54/](https://www.geekbench.com/blog/2021/03/geekbench-54/) (last visited Mar. 17, 2021).

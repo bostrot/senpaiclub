@@ -2,6 +2,7 @@
 layout: post
 title: ReadyNAS Duo v2 Upgrade to Debian Buster
 date: '2019-12-28 10:57:41'
+date: 2019-12-28T09:00:00.000Z
 tags:
 - hardware
 - linux
@@ -92,7 +93,7 @@ Put them both on an usb stick, plug it into the NAS' front port and restart it w
 
 Now set the bootcmd to start from the usb and load the uImage to the location 0x1200000 and uInitrd to 0x2000000.
 
-    set bootcmd usb start;fatload usb 0:1 0x1200000 /uImage;fatload usb 0:1 0x2000000 /uInitrd;bootm 0x1200000 0x200000
+    set bootcmd usb start\;fatload usb 0:1 0x1200000 /uImage\;fatload usb 0:1 0x2000000 /uInitrd\;bootm 0x1200000 0x2000000
     boot
 
 _This actually sets the bootcommand to first start the usb interface then load the file from the usb device with the ID 0:1 into the RAM at the location 0x1200000 and 0x2000000. After that it tells the system where to find both the kernel and the init ramdisk. The boot command now starts the whole procedure._

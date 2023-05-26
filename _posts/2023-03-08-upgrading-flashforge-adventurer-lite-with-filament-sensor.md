@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Upgrading Flashforge Adventurer 3 Lite with Filament sensor
-date: '2023-03-08 00:49:25'
+date: 2023-03-08T09:00:00.000Z
 tags:
 - diy
 - 3d-printer

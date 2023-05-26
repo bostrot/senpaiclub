@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Install Windows 11 on non-compatible CPU (i7-7700k) and ASUS Z270-A
-date: '2021-06-30 11:26:25'
+date: 2021-06-30T09:00:00.000Z
 tags:
 - windows-11
 - i7-7700k
@@ -13,7 +13,7 @@ tags:
 After you heard about Windows 11 new compatibility list you may be bummed out as a lot older (even flagship-) CPUs are not officially supported by the new update. While that may change and Microsoft could add some CPUs to the list here is a quick guide on how some of you can still install the Windows 11 Preview Build on your PC.
 
 I tried it with the i7-7700k and the ASUS Z270-A motherboard. This one has PTT support which is an inbuild TPM module required by Windows 11. As far as I know, it only supports TPM 1.2 so if Microsoft decides to bump to TPM 2.0 before launch then there is a definite no for working with that motherboard.  
-  
+
 Anyways, here is how to set your motherboard up correctly so you can at least receive some dev channel updates for the Windows 11 Insider Preview.
 
 Set those settings in your Z270-A BIOS: (probably similar ones if your mainboard supports PTT. Check that on the manufacturers page)

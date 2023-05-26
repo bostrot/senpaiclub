@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Exclude files and filetypes on OneDrive
-date: '2021-02-16 22:15:50'
+date: 2021-02-16T09:00:00.000Z
 tags:
 - onedrive
 - cloud

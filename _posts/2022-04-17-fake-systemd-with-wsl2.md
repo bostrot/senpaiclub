@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Systemd with WSL2 but not really
-date: '2022-04-17 10:54:25'
+date: 2022-04-17T09:00:00.000Z
 tags:
 - wsl
 - systemd

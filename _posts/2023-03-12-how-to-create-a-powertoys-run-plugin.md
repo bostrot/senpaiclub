@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to Create a PowerToys Run Plugin
-date: 2022-03-12T21:05:00.000Z
+date: 2023-03-12T21:05:00.000Z
 tags:
   - powertoys
   - windows
@@ -50,9 +50,9 @@ In this tutorial, we've walked through the process of creating a simple PowerToy
 
 ## Resources
 
-<https://github.com/bostrot/PowerToysRunPluginWinget>\
-<https://github.com/microsoft/PowerToys>\
-<https://github.com/lin-ycv/EverythingPowerToys>\
-<https://github.com/naari3/PowerToysRunPluginSample>\
-<https://learn.microsoft.com/en-us/windows/powertoys/run>\
-<https://docs.microsoft.com/en-us/windows/package-manager/winget/>
+- **bostrot/PowerToysRunPluginWinget**, [https://github.com/bostrot/PowerToysRunPluginWinget](https://github.com/bostrot/PowerToysRunPluginWinget) (last visited May 26, 2023).
+- **microsoft/PowerToys**, [https://github.com/microsoft/PowerToys](https://github.com/microsoft/PowerToys) (last visited May 26, 2023).
+- **lin-ycv/EverythingPowerToys**, [https://github.com/lin-ycv/EverythingPowerToys](https://github.com/lin-ycv/EverythingPowerToys) (last visited May 26, 2023).
+- **naari3/PowerToysRunPluginSample**, [https://github.com/naari3/PowerToysRunPluginSample](https://github.com/naari3/PowerToysRunPluginSample) (last visited May 26, 2023).
+- **powertoys**, [https://learn.microsoft.com/en-us/windows/powertoys/run](https://learn.microsoft.com/en-us/windows/powertoys/run) (last visited May 26, 2023).
+- **winget**, [https://docs.microsoft.com/en-us/windows/package-manager/winget/](https://docs.microsoft.com/en-us/windows/package-manager/winget/) (last visited May 26, 2023).

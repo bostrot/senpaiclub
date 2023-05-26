@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Steam announces Steam Deck: a handheld gaming PC'
-date: '2021-07-15 18:46:50'
+date: 2021-07-15T09:00:00.000Z
 tags:
 - gaming
 - steam

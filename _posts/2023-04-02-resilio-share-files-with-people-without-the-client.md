@@ -10,8 +10,6 @@ tags:
 ---
 ![Webserver for fiels](/assets/uploads/screenshot-2023-04-03-010211.png)
 
-
-
 Sharing files with Resilio is a breeze, especially if the Resilio client is installed. But what happens when you want to share files with someone who doesn't have a client? Luckily, there is a solution that allows you to do just that.
 The first step is to create a new folder in Resilio. This folder mustn't be encrypted, as that would make it difficult for people without the client to access the files. Once the folder is created, you need to install Resilio on an online server. This server will host your files, allowing people to access them even if their devices are turned off.
 After installing Resilio on the server, set up the folder you created and note the path it uses. This path will be important later on when we start setting up the sharing process.
@@ -29,3 +27,7 @@ To make things easier, you can use a tool like localtunnel or ngrok to create a 
 ![Resilio screenshot](/assets/uploads/screenshot-2023-04-03-010743.png)
 
 In conclusion, sharing files with people who don't have the Resilio client is possible thanks to Docker and a little setup. By following the steps outlined in this article, you can easily share your files with anyone, anywhere, regardless of whether they have the Resilio client or not.
+
+### Resources
+
+- **bostrot/RustyFS**, [https://github.com/bostrot/RustyFS](https://github.com/bostrot/RustyFS) (last visited May 26, 2023).

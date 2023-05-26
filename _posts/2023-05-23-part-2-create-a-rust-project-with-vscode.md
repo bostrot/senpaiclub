@@ -39,15 +39,15 @@ source $HOME/.cargo/env
 
 ### Windows
 
-1. Open Terminal﻿.
+1. Open Terminal.
 2. Download and install rustup by running:
 
-```﻿bash
+```bash
 winget install Rustlang.Rustup
 rustup toolchain install stable-x86_64-pc-windows-msvc
 ```
 
-3﻿. You might need to add the Rust path to your environment.
+3. You might need to add the Rust path to your environment.
 
 ### macOS
 
@@ -68,8 +68,8 @@ source $HOME/.cargo/env
 
 ```bash
 cargo new <your-project-name>
-#﻿ Or with an existing directory
-c﻿argo init
+# Or with an existing directory
+# cargo init
 ```
 
 ## Setting Up Debugging in VSCode
@@ -123,19 +123,25 @@ Create another new file in your `.vscode` directory and name it `tasks.json`. Co
 
 ```json
 {
-	"version": "2.0.0",
-	"tasks": [
-		{
-			"type": "cargo",
-			"command": "build",
-			"problemMatcher": [
-				"$rustc"
-			],
-			"group": "build",
-			"label": "rust: cargo build"
-		}
-	]
+    "version": "2.0.0",
+     "tasks": [
+        {
+            "type": "cargo",
+            "command": "build",
+            "problemMatcher": [
+                "$rustc"
+            ],
+            "group": "build",
+            "label": "rust: cargo build"
+        }
+    ]
 }
 ```
 
 Now, you're all set! You can run your program by pressing `F5`, and VSCode will build and debug your Rust application.
+
+### Sources
+
+- **Rust Analyzer**, [https://marketplace.visualstudio.com/items?itemName=matklad.rust-analyzer](https://marketplace.visualstudio.com/items?itemName=matklad.rust-analyzer) (last visited May 26, 2023).
+- **CodeLLDB**, [https://marketplace.visualstudio.com/items?itemName=vadimcn.vscode-lldb](https://marketplace.visualstudio.com/items?itemName=vadimcn.vscode-lldb) (last visited May 26, 2023).
+- **Other Installation Methods - Rust Forge**, [https://forge.rust-lang.org/infra/other-installation-methods.html](https://forge.rust-lang.org/infra/other-installation-methods.html) (last visited May 26, 2023).

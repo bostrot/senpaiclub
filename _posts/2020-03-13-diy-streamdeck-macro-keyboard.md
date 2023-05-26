@@ -1,7 +1,7 @@
 ---
 layout: post
 title: DiY Streamdeck / Macro keyboard
-date: '2020-03-13 23:00:13'
+date: 2020-03-13T09:00:00.000Z
 tags:
 - hardware
 - productivity
