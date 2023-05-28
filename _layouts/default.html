@@ -69,12 +69,21 @@ layout: compress
     {% include search-loader.html %}
 
     {% include js-selector.html %}
-
     
     <!-- cookieconsent start js -->
     <script defer src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v2.8.9/dist/cookieconsent.js"></script>
     <script defer src="/assets/js/cookieconsent-init.js"></script>
     <!-- cookieconsent end js -->
+    
+    <!-- plausible analytics start -->
+    <script type="text/plain" defer data-domain="senpai.club" data-cookiecategory="analytics" src="https://analytics.bostrot.com/js/script.js" defer></script>
+    <!-- plausible analytics end -->
+
+    <!-- cookieconsent darkmode -->
+    <script>
+    document.body.classList.toggle('c_darkmode');
+    </script>
+    <!-- cookieconsent darkmode end -->
   </body>
 
 </html>
