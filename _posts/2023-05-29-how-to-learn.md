@@ -2,6 +2,7 @@
 layout: post
 title: "How to Learn "
 date: 2023-05-29T19:30:24.016Z
+author: Maximilian Maerkl
 ---
 
 
@@ -69,4 +70,4 @@ University life is more than just about academics, it's a journey of self-discov
 
 
 
-\-﻿ChatGPT-4
+\- ChatGPT-4
