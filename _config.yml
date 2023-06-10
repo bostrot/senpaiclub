@@ -45,6 +45,12 @@ social:
     - https://github.com/bostrot
     - https://www.linkedin.com/in/erictrenkel
 
+author_max:
+  name: Maximilian Maerkl
+  email: max@senpai.club
+  links:
+    - https://senpai.club/about/
+
 google_site_verification: # fill in to your verification string
 
 # ↑ --------------------------
