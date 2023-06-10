@@ -1,0 +1,9 @@
+- name: Eric
+  display_name: Eric Trenkel
+  avatar: /img/eric.jpg
+  permalink: author/eric/
+
+- name: Max
+  display_name: Maximilian Maerkl
+  avatar: /img/max.jpg
+  permalink: author/max/
