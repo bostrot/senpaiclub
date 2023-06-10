@@ -2,7 +2,7 @@
 layout: post
 title: "How to Learn "
 date: 2023-05-29T19:30:24.016Z
-author: Maximilian Maerkl
+author: "Maximilian Maerkl"
 ---
 
 
