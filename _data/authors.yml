@@ -1,9 +1,14 @@
-- name: Eric
+eric:
   display_name: Eric Trenkel
+  name: Eric Trenkel
   avatar: /img/eric.jpg
   permalink: author/eric/
 
-- name: Max
+max:
   display_name: Maximilian Maerkl
+  name: Maximilian Maerkl
   avatar: /img/max.jpg
   permalink: author/max/
+  email: max@senpai.club
+  links:
+    - https://senpai.club/about/
