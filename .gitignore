@@ -3,6 +3,8 @@
 vendor
 Gemfile.lock
 
+.obsidian
+
 # Jekyll cache
 .jekyll-cache
 _site
