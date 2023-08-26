@@ -1,7 +1,7 @@
 ---
 layout: page
 icon: fas fa-section
-order: 5
+order: 6
 ---
 
 ## According to §5 TMG
