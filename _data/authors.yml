@@ -3,6 +3,7 @@ eric:
   name: Eric Trenkel
   avatar: /img/eric.jpg
   permalink: author/eric/
+  url: https://erictrenkel.com
 
 max:
   display_name: Maximilian Maerkl
@@ -10,5 +11,7 @@ max:
   avatar: /img/max.jpg
   permalink: author/max/
   email: max@senpai.club
+  url: https://maxmaerkl.myportfolio.com/
   links:
     - https://senpai.club/about/
+
