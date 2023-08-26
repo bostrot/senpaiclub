@@ -2,10 +2,12 @@
 layout: post
 title: 'QT on WSL2: reMarkable coding on Windows'
 date: 2022-07-21T09:00:00.000Z
+author: eric
 tags:
 - wsl
 - qt
 - remarkable
+categories: [blog, wiki]
 ---
 
  **Get started with the reMarkable toolchain:**

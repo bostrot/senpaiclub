@@ -2,6 +2,7 @@
 layout: post
 title: 'Steam announces Steam Deck: a handheld gaming PC'
 date: 2021-07-15T09:00:00.000Z
+author: eric
 tags:
 - gaming
 - steam
@@ -9,6 +10,7 @@ tags:
 - steam-deck
 - portable
 - valve
+categories: [blog]
 ---
 
 Steam just announced a new handheld gaming device that looks like it is heavily inspired by the Nintendo Switch. That might not be a bad thing though.

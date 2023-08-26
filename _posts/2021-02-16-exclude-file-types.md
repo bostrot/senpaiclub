@@ -2,11 +2,13 @@
 layout: post
 title: Exclude files and filetypes on OneDrive
 date: 2021-02-16T09:00:00.000Z
+author: eric
 tags:
 - onedrive
 - cloud
 - sync
 - files
+categories: [blog, wiki]
 ---
 
 As OneDrive has no easy to access feature to exclude specific files or folders from being uploaded here is a little guide on how to do it with the group policy editor.

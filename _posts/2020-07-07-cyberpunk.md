@@ -2,11 +2,13 @@
 layout: post
 title: Cyberpunk 2077
 date: 2020-07-07T09:00:00.000Z
+author: max
 tags:
 - gaming
 - cyberpunk
 - '2077'
 - games
+categories: [blog]
 ---
 
 All the things we know so far

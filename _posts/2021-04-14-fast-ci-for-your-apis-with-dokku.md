@@ -2,12 +2,14 @@
 layout: post
 title: Fast CD with Dokku on Docker
 date: 2021-04-14T09:00:00.000Z
+author: eric
 tags:
 - dokku
 - docker
 - guide
 - cd
 - home-server
+categories: [blog, wiki]
 ---
 
 This will be my little journey on how I set up my CD with dokku, nginx as a reverse proxy, as a cache (in case of downtime) and SSL with wildcard domains.

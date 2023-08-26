@@ -2,11 +2,13 @@
 layout: post
 title: How to Create a PowerToys Run Plugin
 date: 2023-03-12T21:05:00.000Z
+author: eric
 tags:
   - powertoys
   - windows
   - tutorial
   - development
+categories: [blog, wiki]
 ---
 
 PowerToys Run is a powerful search utility for Windows 10 that allows you to quickly find and launch applications, files, and more. One of the great things about PowerToys Run is its extensibility - you can create your own plugins to add new functionality and customize the search experience.

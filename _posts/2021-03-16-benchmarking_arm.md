@@ -2,11 +2,13 @@
 layout: post
 title: Benchmarking single board computers with Geekbench for ARM
 date: 2021-03-16T09:00:00.000Z
+author: eric
 tags:
 - benchmark
 - arm
 - geekbench
 - raspberry-pi
+categories: [blog, wiki]
 ---
 
 Geekbench released a pre-released version (5.4) of their benchmarking software a short while ago which makes it very easy to benchmark your single board computers and compare them. Of course this might also work with any kind of ARM device.

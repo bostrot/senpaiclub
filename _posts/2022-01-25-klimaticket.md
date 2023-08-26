@@ -2,6 +2,7 @@
 layout: post
 title: Austria's KlimaTicket
 date: 2022-01-25T09:00:00.000Z
+author: eric
 tags:
 - environment
 - education
@@ -9,6 +10,7 @@ tags:
 - news
 - climate
 - green
+categories: [blog]
 ---
 
 Austria's answer to combat climate change.

@@ -2,11 +2,13 @@
 layout: post
 title: Useful programs and scripts for your Home Server
 date: 2020-03-16T09:00:00.000Z
+author: eric
 tags:
 - linux
 - productivity
 - raspberry-pi
 - home-server
+categories: [blog]
 ---
 
 # Essential Home Server Programs and Commands

@@ -3,11 +3,13 @@ layout: post
 title: ReadyNAS Duo v2 Upgrade to Debian Buster
 date: '2019-12-28 10:57:41'
 date: 2019-12-28T09:00:00.000Z
+author: eric
 tags:
 - hardware
 - linux
 - home-server
 - guide
+categories: [blog, wiki]
 ---
 
 ## Introduction

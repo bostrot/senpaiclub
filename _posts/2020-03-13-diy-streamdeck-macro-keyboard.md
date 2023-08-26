@@ -2,10 +2,12 @@
 layout: post
 title: DiY Streamdeck / Macro keyboard
 date: 2020-03-13T09:00:00.000Z
+author: eric
 tags:
 - hardware
 - productivity
 - diy
+categories: [blog, wiki]
 ---
 
 <figure class="kg-card kg-gallery-card kg-width-wide"><div class="kg-gallery-container"><div class="kg-gallery-row">

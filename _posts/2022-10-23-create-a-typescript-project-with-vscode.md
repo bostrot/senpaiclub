@@ -2,10 +2,12 @@
 layout: post
 title: "Part 1: Create a TypeScript project with VSCode"
 date: 2022-10-23T09:00:00.000Z
+author: eric
 tags:
   - tutorial
   - typescript
   - development
+categories: [blog, wiki]
 ---
 
 It is pretty easy to create a TypeScript project but the problem (at least for me) is the configuration with VSCode in order for the debugger works. Following I have fetched some configuration that helps create a TypeScript project and configure VSCode in order that you can simply use your regular shortcuts to start debugging it.

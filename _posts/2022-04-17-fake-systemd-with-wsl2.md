@@ -2,9 +2,11 @@
 layout: post
 title: Systemd with WSL2 but not really
 date: 2022-04-17T09:00:00.000Z
+author: eric
 tags:
 - wsl
 - systemd
+categories: [blog]
 ---
 
 Just a short article about fake systemd with WSL2.

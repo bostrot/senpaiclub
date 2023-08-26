@@ -2,13 +2,15 @@
 layout: post
 title: A quick guide for Kubernetes on a Raspberry Pi (3, 3B, 4) cluster
 date: 2020-03-15T09:00:00.000Z
+author: eric
 tags:
 - raspberry-pi
 - kubernetes
 - container
 - home-server
 - cluster
-- guide
+- guide  
+categories: [blog, wiki]
 ---
 
 While there are many guides on creating a cluster with Kubernetes there are less on how to create one with Raspberry Pi's (arm architecture) and even less for novices that explain in an easy way what to keep in mind when doing this.

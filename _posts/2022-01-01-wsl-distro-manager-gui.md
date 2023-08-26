@@ -2,6 +2,7 @@
 layout: post
 title: Windows Subsystem for Linux (WSL) Distro Manager GUI
 date: 2022-01-01T09:00:00.000Z
+author: eric
 tags:
 - wsl
 - linux
@@ -9,6 +10,7 @@ tags:
 - github
 - project
 - flutter
+categories: [blog]
 ---
 
 If you are developing different software that was built on different machines or Linux distros you might have come across the issue that - especially out-of-date - code might only work with a specific distro. To counter that and other stuff Windows has, fortunately, build the Windows Subsystem for Linux which enables you to run Linux distros on Linux without a virtualization layer. They also gave the option to import a rootfs to use different distros on it. Unfortunately, it might be a bit cumbersome to get the cmds right to export a WSL instance or quickly set up a new one with a specific distro.
