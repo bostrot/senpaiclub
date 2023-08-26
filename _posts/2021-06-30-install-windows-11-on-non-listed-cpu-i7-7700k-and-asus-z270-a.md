@@ -9,7 +9,7 @@ tags:
 - z270-a
 - insider-preview
 - update
-categories: [blog, wiki]
+categories: [wiki]
 ---
 
 After you heard about Windows 11 new compatibility list you may be bummed out as a lot older (even flagship-) CPUs are not officially supported by the new update. While that may change and Microsoft could add some CPUs to the list here is a quick guide on how some of you can still install the Windows 11 Preview Build on your PC.

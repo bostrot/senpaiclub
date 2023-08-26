@@ -7,7 +7,7 @@ tags:
 - hardware
 - productivity
 - diy
-categories: [blog, wiki]
+categories: [wiki]
 ---
 
 <figure class="kg-card kg-gallery-card kg-width-wide"><div class="kg-gallery-container"><div class="kg-gallery-row">

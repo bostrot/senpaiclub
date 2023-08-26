@@ -9,7 +9,7 @@ tags:
 - linux
 - home-server
 - guide
-categories: [blog, wiki]
+categories: [wiki]
 ---
 
 ## Introduction

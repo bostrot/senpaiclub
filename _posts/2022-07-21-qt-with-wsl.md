@@ -7,7 +7,7 @@ tags:
 - wsl
 - qt
 - remarkable
-categories: [blog, wiki]
+categories: [wiki]
 ---
 
  **Get started with the reMarkable toolchain:**

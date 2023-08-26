@@ -8,7 +8,7 @@ tags:
 - cloud
 - sync
 - files
-categories: [blog, wiki]
+categories: [wiki]
 ---
 
 As OneDrive has no easy to access feature to exclude specific files or folders from being uploaded here is a little guide on how to do it with the group policy editor.

@@ -8,7 +8,7 @@ tags:
 - arm
 - geekbench
 - raspberry-pi
-categories: [blog, wiki]
+categories: [wiki]
 ---
 
 Geekbench released a pre-released version (5.4) of their benchmarking software a short while ago which makes it very easy to benchmark your single board computers and compare them. Of course this might also work with any kind of ARM device.

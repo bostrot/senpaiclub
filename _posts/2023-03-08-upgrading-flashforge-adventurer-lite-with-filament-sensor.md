@@ -7,7 +7,7 @@ tags:
 - diy
 - 3d-printer
 - upgrade
-categories: [blog, wiki]
+categories: [wiki]
 ---
 
 If you are an avid user of the FlashForge Adventurer 3 Lite 3D printer, you may have noticed that it lacks a filament sensor. A filament sensor is a useful addition to any 3D printer as it detects when the filament is running low or has run out, preventing wasted time and material. Fortunately, it is possible to add a filament sensor to the FlashForge Adventurer 3 Lite with some modifications to the firmware and hardware.

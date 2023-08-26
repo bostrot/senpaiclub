@@ -8,7 +8,7 @@ tags:
   - windows
   - tutorial
   - development
-categories: [blog, wiki]
+categories: [wiki]
 ---
 
 PowerToys Run is a powerful search utility for Windows 10 that allows you to quickly find and launch applications, files, and more. One of the great things about PowerToys Run is its extensibility - you can create your own plugins to add new functionality and customize the search experience.

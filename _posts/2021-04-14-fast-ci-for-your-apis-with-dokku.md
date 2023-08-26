@@ -9,7 +9,7 @@ tags:
 - guide
 - cd
 - home-server
-categories: [blog, wiki]
+categories: [wiki]
 ---
 
 This will be my little journey on how I set up my CD with dokku, nginx as a reverse proxy, as a cache (in case of downtime) and SSL with wildcard domains.

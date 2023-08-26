@@ -10,7 +10,7 @@ tags:
 - home-server
 - cluster
 - guide  
-categories: [blog, wiki]
+categories: [wiki]
 ---
 
 While there are many guides on creating a cluster with Kubernetes there are less on how to create one with Raspberry Pi's (arm architecture) and even less for novices that explain in an easy way what to keep in mind when doing this.
