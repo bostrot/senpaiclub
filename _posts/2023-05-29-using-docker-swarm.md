@@ -192,5 +192,4 @@ Additionally, Portainer was introduced as a robust yet user-friendly option for 
 
 In summary, the combination of Docker Swarm, Caddy 2, GlusterFS, and Portainer offers a robust, secure, and cost-effective solution for container orchestration. Although the system is optimal for smaller to medium-scale deployments, the architecture provides substantial flexibility for future scaling and can be augmented with more advanced solutions.
 
-Thank you for following this guide. The approach outlined here serves as both an educational model and a practical framework for smaller production environments.
-
+Happy containerizing!
