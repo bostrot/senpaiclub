@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Part 2: Create a Rust project with VSCode"
-date: 2023-05-23T09:01:34.681Z
+date: 2023-05-29T09:01:34.681Z
 author: eric
 categories: [wiki]
 ---
