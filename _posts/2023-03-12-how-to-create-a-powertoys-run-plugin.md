@@ -26,7 +26,9 @@ Before we get started, make sure you have the following installed on your comput
 
 First, we must set up our development environment by cloning the PowerToys repository and initializing its submodules. Open a command prompt or terminal and run the following commands:
 
-    git clone https://github.com/microsoft/PowerToys cd PowerToys git submodule update --init --recursive
+    git clone https://github.com/microsoft/PowerToys
+    cd PowerToys
+    git submodule update --init --recursive
 
 Next, we'll clone our example Winget plugin into the `PowerToys/src/modules/launcher/Plugins` directory:
 
