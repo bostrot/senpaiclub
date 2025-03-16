@@ -10,7 +10,7 @@ categories: [wiki, lineageos, android]
 
 Building custom ROMs like LineageOS locally can take time and resources, even if you have powerful hardware. While I have a powerful Mac M2 Max at home, I was looking for a quick and convenient solution without dealing with VMs & dependency downloads.
 
-That's why I opted for using a remote VPS from Hetzner (affiliate link), which allows quickly spinning up powerful build instances paid by the hour. You can spin them up, build LineageOS remotely, and delete them immediately afterward to avoid unnecessary charges. Of course, any other VPS provider offering hourly billing would also work.
+That's why I opted for using a remote VPS from Hetzner (affiliate: get €20 starting credit [here](https://hetzner.cloud/?ref=iFwjbW8nnaVX)), which allows quickly spinning up powerful build instances paid by the hour. You can spin them up, build LineageOS remotely, and delete them immediately afterward to avoid unnecessary charges. Of course, any other VPS provider offering hourly billing would also work.
 
 ## Quick overview of remote building steps
 
