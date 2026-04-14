@@ -84,8 +84,8 @@ avatar: /assets/img/size/w256h256/2022/06/Club-3-mini-Transparent_black.png
 toc: true
 
 comments:
-  active: giscus # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable
-  # The active options are as follows:
+  provider: giscus # The global switch for post comments. Keep it empty to disable.
+  # The provider options are as follows:
   disqus:
     shortname: # senpai-club # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
   # utterances settings › https://utteranc.es/
