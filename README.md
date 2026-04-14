@@ -34,6 +34,20 @@ $ bundle
 
 Please see the [theme's docs](https://github.com/cotes2020/jekyll-theme-chirpy#documentation).
 
+## Run With Docker Compose
+
+You can run this site without installing Ruby, Jekyll, or Bundler on your host.
+
+```shell
+# Start the development server
+docker compose up
+
+# Build the static site into ./_site
+docker compose run --rm jekyll bundle exec jekyll build
+```
+
+Then open <http://localhost:4000>.
+
 ## License
 
 This work is published under [MIT][mit] License.

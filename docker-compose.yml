@@ -1,0 +1,14 @@
+services:
+  jekyll:
+    build:
+      context: .
+      dockerfile: Dockerfile.jekyll
+    working_dir: /srv/jekyll
+    entrypoint: ["/bin/sh", "/srv/jekyll/docker-entrypoint.sh"]
+    ports:
+      - "4000:4000"
+      - "35729:35729"
+    volumes:
+      - ./:/srv/jekyll
+      - ./.bundle:/usr/local/bundle
+      - ./.jekyll-cache:/srv/jekyll/.jekyll-cache

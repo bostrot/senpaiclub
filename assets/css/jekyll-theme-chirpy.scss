@@ -1,0 +1,95 @@
+---
+---
+
+/* prettier-ignore */
+@use 'main
+{%- if jekyll.environment == 'production' -%}
+  .bundle
+{%- endif -%}
+';
+
+/* append your custom style below */
+
+#sidebar #avatar {
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+#sidebar #avatar img {
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.site-title {
+  display: none !important;
+}
+
+.newsletter-panel {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--main-border-color);
+}
+
+.newsletter-panel .panel-heading {
+  margin-bottom: 0;
+}
+
+.newsletter-panel .newsletter-body {
+  width: 100%;
+  margin-right: 0;
+  margin-top: 0.75rem !important;
+}
+
+.newsletter-signup {
+  width: 100%;
+}
+
+.newsletter-signup .newsletter-email {
+  font-size: 0.875rem;
+  background-color: var(--main-bg);
+  border: 1px solid var(--search-border-color);
+  color: var(--text-color);
+}
+
+.newsletter-signup .newsletter-email::placeholder {
+  color: var(--text-muted-color);
+}
+
+.newsletter-signup .newsletter-email:focus {
+  border-color: var(--input-focus-border-color);
+  box-shadow: 0 0 0 0.15rem rgb(13 110 253 / 20%);
+}
+
+.newsletter-signup .newsletter-submit {
+  font-size: 0.8rem;
+  line-height: 1;
+  padding: 0.45rem 0.65rem;
+}
+
+.newsletter-signup .newsletter-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+html[data-mode='dark'] #sidebar #avatar img {
+  filter: invert(1);
+}
+
+html[data-mode='dark'] .newsletter-signup .newsletter-email {
+  background-color: rgb(255 255 255 / 4%);
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-mode]) #sidebar #avatar img {
+    filter: invert(1);
+  }
+
+  html:not([data-mode]) .newsletter-signup .newsletter-email {
+    background-color: rgb(255 255 255 / 4%);
+  }
+}
