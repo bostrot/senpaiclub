@@ -25,7 +25,8 @@ After this setup, you should have:
 1. reliable VS Code Remote SSH connections even with Fish shell
 2. predictable key selection (no random key spam)
 3. optional SSH agent forwarding for remote Git and nested SSH usage
-4. easy debugging when auth fails
+4. a correct remote-machine configuration to prevent GitHub authentication errors
+5. easy debugging when auth fails
 
 ## Step 1: Fix VS Code Remote + Fish Shell
 
@@ -88,7 +89,28 @@ On the remote host, ensure the SSH daemon allows forwarding as well, because bot
 AllowAgentForwarding yes
 ```
 
-## Step 5: Verify Which Keys Are Actually Available
+## Step 5: The "Dumb Pipe" Limitation (Configuring the Remote Host)
+
+This is the most common pitfall when using Agent Forwarding. Agent Forwarding acts like a "dumb pipe"—**it forwards your keys, but it does NOT forward your local SSH rules.** 
+
+When you open a VS Code terminal on your remote Mac Studio and type `git push`, the *remote* SSH client executes the connection. It sees all your forwarded 1Password keys, but because it doesn't have your local `~/.ssh/config` rules, it just blindly throws the first key it finds at GitHub. If you have multiple keys (like a deploy bot key), GitHub might log you in as the bot and deny access with `Repository not found`.
+
+**The Fix:** You must recreate your routing rules in the `~/.ssh/config` file **on the remote machine** (the Mac Studio), using the public key trick from Step 3.
+
+Create or edit `~/.ssh/config` on the *remote* host:
+
+```sshconfig
+Host github.com
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/github_personal.pub
+    IdentitiesOnly yes
+```
+*(Make sure the specific `.pub` file actually exists on the remote machine).*
+
+When the remote SSH client connects to GitHub, `IdentitiesOnly yes` forces it to look at the `.pub` file, ask your forwarded 1Password agent for the matching signature, and ignore all other forwarded keys. 
+
+## Step 6: Verify Which Keys Are Actually Available
 
 Check locally first:
 
@@ -98,7 +120,7 @@ ssh-add -l
 
 Then check again in the remote VS Code terminal. This simple comparison immediately shows whether agent forwarding is active and whether the identities you expect are actually present where you need them.
 
-## Step 6: Understand the "Too Many Keys" Problem
+## Step 7: Understand the "Too Many Keys" Problem
 
 When 1Password contains many SSH keys, the client may offer several identities before it reaches the correct one. Because SSH servers usually enforce a maximum number of attempts (`MaxAuthTries`), authentication can fail early even though the right key is available in the agent.
 
@@ -144,7 +166,7 @@ So the mapping is:
 3. agent signs challenge
 4. server verifies against `authorized_keys`
 
-## Step 7: Debug with Verbose SSH Logs
+## Step 8: Debug with Verbose SSH Logs
 
 When authentication is unclear, go straight to verbose logs instead of guessing:
 
@@ -167,6 +189,7 @@ Look for these lines and read them in sequence, because they show the exact orde
 2. configure `IdentityAgent` to 1Password socket on macOS
 3. use host-specific `IdentityFile` + `IdentitiesOnly yes`
 4. enable agent forwarding if you need remote Git/SSH chaining
-5. verify with `ssh-add -l` and debug with `ssh -vvv`
+5. configure `IdentitiesOnly` on the **remote** host to manage outbound SSH
+6. verify with `ssh-add -l` and debug with `ssh -vvv`
 
 With this in place, VS Code Remote SSH, Fish, and 1Password behave like one integrated system instead of three tools that occasionally conflict with each other at startup or authentication time.
