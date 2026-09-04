@@ -22,7 +22,7 @@ draft: false            # drafts render in dev only
 
 Images go in `public/assets/uploads/` and are referenced as `/assets/uploads/file.png`. Code blocks support a title and line markers, e.g. ```` ```bash title="install.sh" {2-3} ````.
 
-A browser editor ([Sveltia CMS](https://sveltiacms.app), GitLab login) is available at `/admin/`.
+A browser editor ([Sveltia CMS](https://sveltiacms.app), sign in with a GitHub personal access token) is available at `/admin/`.
 
 ## Development
 

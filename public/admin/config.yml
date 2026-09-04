@@ -1,9 +1,10 @@
+# GitHub is the repo that deploys (the GitLab project is a stale copy).
+# Sign in with a fine-grained personal access token (Contents: read/write on this repo),
+# or set up sveltia-cms-auth on Cloudflare Workers and add `base_url` for one-click OAuth.
 backend:
-  name: gitlab
+  name: github
   repo: bostrot/senpaiclub
   branch: main
-  auth_type: pkce
-  app_id: 16c44dec105f6f32e8f87d0368bc4c4d6b0b1d7c4366518feec18ae57c3b45f3
 site_url: https://senpai.club
 display_url: https://senpai.club
 logo_url: https://senpai.club/assets/img/seal.png
