@@ -4,8 +4,13 @@ backend:
   branch: main
   auth_type: pkce
   app_id: 16c44dec105f6f32e8f87d0368bc4c4d6b0b1d7c4366518feec18ae57c3b45f3
+site_url: https://senpai.club
+display_url: https://senpai.club
+logo_url: https://senpai.club/assets/img/favicons/android-icon-192x192.png
 media_folder: "public/assets/uploads"
 public_folder: "/assets/uploads"
+output:
+  omit_empty_optional_fields: true
 collections:
   - name: "blog"
     label: "Blog"
@@ -13,6 +18,8 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     preview_path: "{{slug}}/"
+    summary: "{{title}} — {{date | date('YYYY-MM-DD')}}"
+    sortable_fields: [date, title]
     editor:
       preview: true
     fields:
@@ -20,9 +27,10 @@ collections:
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Author", name: "author", widget: "select", options: ["eric", "max"], default: "eric" }
       - { label: "Description", name: "description", widget: "string", required: false, hint: "Shown on cards, in search results and social previews (~160 chars)." }
-      - { label: "Categories", name: "categories", widget: "list", default: ["wiki"], hint: "wiki = guide, tutorial, blog" }
-      - { label: "Tags", name: "tags", widget: "list", required: false }
-      - { label: "Cover image", name: "image", widget: "image", required: false }
+      - { label: "Category", name: "categories", widget: "select", multiple: true, options: [{ label: "Guide", value: "wiki" }, { label: "Tutorial", value: "tutorial" }, { label: "Blog", value: "blog" }], default: ["wiki"] }
+      - { label: "Tags", name: "tags", widget: "list", required: false, hint: "Comma-separated, lowercase, e.g. proxmox, windows" }
+      - { label: "Cover image", name: "image", widget: "image", required: false, hint: "Optional. Without one, a kanji cover is generated automatically." }
+      - { label: "Kanji", name: "kanji", widget: "string", required: false, pattern: ["^.{1,2}$", "One or two characters"], hint: "Override the auto-picked cover kanji." }
       - { label: "Featured on home", name: "featured", widget: "boolean", default: false, required: false }
       - { label: "Draft", name: "draft", widget: "boolean", default: false, required: false }
       - { label: "Body", name: "body", widget: "markdown" }
