@@ -1,59 +1,46 @@
-# Chirpy Starter [![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy)](https://rubygems.org/gems/jekyll-theme-chirpy) [![GitHub license](https://img.shields.io/github/license/cotes2020/chirpy-starter.svg?color=blue)][mit]
+# senpai.club
 
-When installing the [**Chirpy**][chirpy] theme through [RubyGems.org][gem], Jekyll can only read files in the folders `/_data`, `/_layouts`, `/_includes`, `/_sass` and `/assets`, as well as a small part of options of the `/_config.yml` file from the theme's gem. If you have ever installed this theme gem, you can use the command `bundle info --path jekyll-theme-chirpy` to locate these files.
+Source for [senpai.club](https://senpai.club), built with [Astro](https://astro.build).
 
-The Jekyll team claims that this is to leave the ball in the user’s court, but this also results in users not being able to enjoy the out-of-the-box experience when using feature-rich themes.
+## Writing
 
-To fully use all the features of **Chirpy**, you need to copy the other critical files from the theme's gem to your Jekyll site. The following is a list of targets:
+Posts live in `src/content/posts/` as Markdown files named `YYYY-MM-DD-slug.md`. The date prefix is stripped from the URL, so `2026-05-03-atlas-os-on-windows.md` becomes `/atlas-os-on-windows/`.
 
-```shell
-.
-├── _config.yml
-├── _plugins
-├── _tabs
-└── index.html
+```yaml
+---
+title: "My post"
+date: 2026-05-03T19:00:00.000Z
+author: eric            # eric | max (see src/data/site.ts)
+description: "One or two sentences for cards, search and social previews."
+categories: [wiki]      # wiki (shown as Guide), tutorial, blog
+tags: [proxmox, windows]
+image: /assets/uploads/cover.png   # optional
+featured: false         # pin to the top of the home page
+draft: false            # drafts render in dev only
+---
 ```
 
-To save you time, and also in case you lose some files while copying, we extract those files/configurations of the latest version of the **Chirpy** theme and the [CD][CD] workflow to here, so that you can start writing in minutes.
+Images go in `public/assets/uploads/` and are referenced as `/assets/uploads/file.png`. Code blocks support a title and line markers, e.g. ```` ```bash title="install.sh" {2-3} ````.
 
-## Prerequisites
+The Decap CMS editor is still available at `/admin/`.
 
-Follow the instructions in the [Jekyll Docs](https://jekyllrb.com/docs/installation/) to complete the installation of the basic environment. [Git](https://git-scm.com/) also needs to be installed.
+## Development
 
-## Installation
-
-Sign in to GitHub and [**use this template**][use-template] to generate a brand new repository and name it `USERNAME.github.io`, where `USERNAME` represents your GitHub username.
-
-Then clone it to your local machine and run:
-
-```
-$ bundle
+```bash
+npm install
+npm run dev        # http://localhost:4321
+npm run build      # static site in dist/ (also builds the search index)
+npm run preview
 ```
 
-## Usage
+Node 22+ is required. Deployment to GitHub Pages happens automatically on push to `main`.
 
-Please see the [theme's docs](https://github.com/cotes2020/jekyll-theme-chirpy#documentation).
+## Features
 
-## Run With Docker Compose
-
-You can run this site without installing Ruby, Jekyll, or Bundler on your host.
-
-```shell
-# Start the development server
-docker compose up
-
-# Build the static site into ./_site
-docker compose run --rm jekyll bundle exec jekyll build
-```
-
-Then open <http://localhost:4000>.
-
-## License
-
-This work is published under [MIT][mit] License.
-
-[gem]: https://rubygems.org/gems/jekyll-theme-chirpy
-[chirpy]: https://github.com/cotes2020/jekyll-theme-chirpy/
-[use-template]: https://github.com/cotes2020/chirpy-starter/generate
-[CD]: https://en.wikipedia.org/wiki/Continuous_deployment
-[mit]: https://github.com/cotes2020/chirpy-starter/blob/master/LICENSE
+- Static Astro site, no client framework; fonts self-hosted, no analytics
+- Light/dark theme, view transitions, prefetching
+- Full-text search (Pagefind, `⌘K`)
+- Table of contents with scroll-spy, reading time, "Updated" dates from git history
+- Code blocks with copy button, titles, line numbers and highlighting (Expressive Code)
+- Generated Open Graph images per post, RSS at `/feed.xml`, sitemap, JSON-LD
+- giscus comments, Mailchimp newsletter, related and adjacent posts

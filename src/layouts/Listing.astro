@@ -1,0 +1,24 @@
+---
+import Base from './Base.astro';
+import PostCard from '../components/PostCard.astro';
+import type { Post } from '../lib/posts';
+interface Props { eyebrow: string; title: string; description: string; posts: Post[]; }
+const { eyebrow, title, description, posts } = Astro.props;
+---
+<Base title={title} description={description}>
+  <div class="container page">
+    <header class="head">
+      <p class="eyebrow">{eyebrow}</p>
+      <h1>{title}</h1>
+      <p class="lead">{description}</p>
+    </header>
+    <div class="grid">{posts.map((p) => <PostCard post={p} />)}</div>
+  </div>
+</Base>
+<style>
+  .page { padding-top: 3rem; }
+  .head { margin-bottom: 2rem; }
+  h1 { font-size: clamp(2rem, 4vw, 2.75rem); margin: 0.4rem 0 0.75rem; }
+  .lead { color: var(--fg-muted); margin: 0; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; }
+</style>

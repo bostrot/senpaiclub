@@ -1,0 +1,33 @@
+---
+import { SITE } from '../data/site';
+interface Props { compact?: boolean; }
+const { compact = false } = Astro.props;
+const n = SITE.newsletter;
+---
+<section class:list={['newsletter card', { compact }]} aria-label="Newsletter">
+  <div class="text">
+    <p class="eyebrow"><span class="jp" lang="ja">購読</span>Newsletter</p>
+    <h3>New guides, straight to your inbox.</h3>
+    <p>No spam, no schedule. Only when there is something worth reading.</p>
+  </div>
+  <form action={n.action} method="post" target="_blank" class="form">
+    <label class="sr-only" for="nl-email">Email address</label>
+    <input id="nl-email" type="email" name="EMAIL" placeholder="you@example.com" required autocomplete="email" />
+    <input type="hidden" name="tags" value={n.tag} />
+    <div style="position:absolute;left:-5000px" aria-hidden="true"><input type="text" name={n.honeypot} tabindex="-1" value="" /></div>
+    <button type="submit" class="btn btn-primary">Subscribe</button>
+  </form>
+</section>
+
+<style>
+  .newsletter { display: grid; grid-template-columns: 1.2fr 1fr; gap: 2rem; align-items: center; padding: 2rem 2.25rem; background: linear-gradient(135deg, var(--bg-elevated), var(--bg-subtle)); }
+  .newsletter h3 { font-size: 1.35rem; margin: 0.35rem 0 0.5rem; }
+  .newsletter p:last-child { margin: 0; color: var(--fg-muted); font-size: 0.925rem; }
+  .form { display: flex; gap: 0.5rem; position: relative; }
+  input[type='email'] { flex: 1; min-width: 0; padding: 0.6rem 0.9rem; border-radius: 999px; border: 1px solid var(--border-strong); background: var(--bg); color: var(--fg); font: inherit; font-size: 0.925rem; }
+  input[type='email']:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+  .compact { grid-template-columns: 1fr; padding: 1.25rem; gap: 1rem; }
+  .compact h3 { font-size: 1.05rem; }
+  .compact .form { flex-direction: column; }
+  @media (max-width: 720px) { .newsletter { grid-template-columns: 1fr; } .form { flex-direction: column; } }
+</style>

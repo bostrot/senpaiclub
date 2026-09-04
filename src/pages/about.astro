@@ -1,0 +1,51 @@
+---
+import Page from '../layouts/Page.astro';
+import { AUTHORS, SITE } from '../data/site';
+---
+<Page title="About" eyebrow="Senpai Club" description="A small tech blog run by two friends who like taking things apart and writing down what they learned.">
+  <p>
+    Senpai Club started in 2019 as a place to keep notes on home-lab experiments, Windows and Linux tinkering, and the occasional
+    hardware project. The posts are mostly step-by-step guides written right after solving a problem, so they tend to include the
+    dead ends as well as the fix.
+  </p>
+
+  <h2 id="eric">Eric Trenkel</h2>
+  <p><em>{AUTHORS.eric.bio}</em></p>
+  <p>
+    Born in Germany, grew up partly in Austria, studied computer science at FH Aachen. Maintains
+    <a href="https://github.com/bostrot/wsl2-distro-manager" target="_blank" rel="noopener">WSL Manager</a> and runs the
+    infrastructure behind this site.
+  </p>
+  <figure class="kg-card kg-gallery-card kg-width-wide">
+    <div class="kg-gallery-container"><div class="kg-gallery-row">
+      <div class="kg-gallery-image"><img src="/assets/img/size/w600/2021/03/server_front.jpg" width="600" height="800" loading="lazy" alt="Home server rack, front" /></div>
+      <div class="kg-gallery-image"><img src="/assets/img/size/w600/2021/03/server_back.jpg" width="600" height="800" loading="lazy" alt="Home server rack, back" /></div>
+    </div></div>
+    <figcaption>The home lab that most of the guides here were written on.</figcaption>
+  </figure>
+  <p>
+    <a href={SITE.homepage} target="_blank" rel="noopener">erictrenkel.com</a> ·
+    <a href={SITE.github} target="_blank" rel="noopener">GitHub</a> ·
+    <a href={SITE.linkedin} target="_blank" rel="noopener">LinkedIn</a>
+  </p>
+
+  <h2 id="max">Maximilian Maerkl</h2>
+  <p><em>{AUTHORS.max.bio}</em></p>
+  <p>
+    Born in Taipei, raised in Austria and Germany, fluent in English, German, Spanish and Mandarin. Has worked as a fundraiser,
+    bartender, film producer and Emergency Medical Technician, and travels a lot between Europe and Asia.
+  </p>
+  <figure>
+    <img src="/assets/img/2019/12/IMG_4463_3-2.jpg" loading="lazy" alt="Max on a volcano in Bali" />
+    <figcaption>Max somewhere on a volcano in Bali.</figcaption>
+  </figure>
+  <p>
+    <a href="https://maxmaerkl.myportfolio.com/" target="_blank" rel="noopener">Portfolio</a> ·
+    <a href="https://www.instagram.com/max.likes.rice/" target="_blank" rel="noopener">Instagram</a> ·
+    <a href="https://www.behance.net/RiceRiot" target="_blank" rel="noopener">Behance</a> ·
+    <a href="https://t.me/RiceRiot" target="_blank" rel="noopener">Telegram</a>
+  </p>
+
+  <h2 id="contact">Contact</h2>
+  <p>Questions or corrections: <a href={`mailto:${SITE.email}`}>{SITE.email}</a>. Every post also has an “Edit on GitHub” link.</p>
+</Page>

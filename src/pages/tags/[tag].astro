@@ -1,0 +1,13 @@
+---
+import Listing from '../../layouts/Listing.astro';
+import { countBy, getPosts, slugify } from '../../lib/posts';
+export async function getStaticPaths() {
+  const posts = await getPosts();
+  return countBy(posts, 'tags').map((t) => ({
+    params: { tag: t.slug },
+    props: { name: t.name, posts: posts.filter((p) => p.data.tags.some((x) => slugify(x) === t.slug)) },
+  }));
+}
+const { name, posts } = Astro.props;
+---
+<Listing eyebrow="Tag" title={`#${name}`} description={`${posts.length} ${posts.length === 1 ? 'post' : 'posts'} tagged “${name}”.`} posts={posts} />

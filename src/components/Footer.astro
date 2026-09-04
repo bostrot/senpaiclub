@@ -1,0 +1,50 @@
+---
+import { SITE } from '../data/site';
+const year = new Date().getFullYear();
+---
+<footer class="site-footer">
+  <div class="container inner">
+    <div class="col about">
+      <div class="brand"><span class="hanko" lang="ja" aria-hidden="true">先輩</span> Senpai Club</div>
+      <p>{SITE.description}</p>
+      <div class="social">
+        <a href={SITE.github} target="_blank" rel="noopener">GitHub</a>
+        <a href={SITE.linkedin} target="_blank" rel="noopener">LinkedIn</a>
+        <a href={`mailto:${SITE.email}`}>Email</a>
+        <a href="/feed.xml">RSS</a>
+      </div>
+    </div>
+    <div class="col links">
+      <h4>Browse</h4>
+      <a href="/archives/">All posts</a>
+      <a href="/tags/">Tags</a>
+      <a href="/categories/">Categories</a>
+      <a href="/about/">About</a>
+    </div>
+    <div class="col links">
+      <h4>Legal</h4>
+      <a href="/imprint/">Imprint</a>
+      <a href={SITE.repo} target="_blank" rel="noopener">Source on GitHub</a>
+    </div>
+  </div>
+  <div class="container bottom">
+    <span>© {year} {SITE.author}. All rights reserved.</span>
+    <span class="muted">Built with Astro · No trackers.</span>
+  </div>
+</footer>
+
+<style>
+  .site-footer { margin-top: 5rem; border-top: 1px solid var(--border); background: var(--bg-subtle); font-size: 0.9rem; color: var(--fg-muted); }
+  .inner { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 2rem; padding: 3rem 0 2rem; }
+  .brand { font-family: var(--font-display); font-weight: 700; color: var(--fg); font-size: 1.05rem; display: flex; align-items: center; gap: 0.6rem; }
+  .about p { max-width: 42ch; margin: 0.75rem 0 1rem; }
+  .social { display: flex; gap: 1rem; }
+  .social a, .links a { color: var(--fg-muted); }
+  .social a:hover, .links a:hover, .bottom a:hover { color: var(--accent); }
+  .links { display: flex; flex-direction: column; gap: 0.5rem; }
+  .links h4 { color: var(--fg); font-size: 0.85rem; margin-bottom: 0.25rem; }
+  .bottom { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; padding: 1.25rem 0; border-top: 1px solid var(--border); font-size: 0.8rem; }
+  .bottom a { text-decoration: underline; text-underline-offset: 0.2em; }
+  .muted { color: var(--fg-faint); }
+  @media (max-width: 720px) { .inner { grid-template-columns: 1fr 1fr; } .about { grid-column: 1 / -1; } }
+</style>

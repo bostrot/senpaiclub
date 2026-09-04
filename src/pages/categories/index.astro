@@ -1,0 +1,19 @@
+---
+import Base from '../../layouts/Base.astro';
+import { countBy, getPosts } from '../../lib/posts';
+import { CATEGORY_LABELS } from '../../data/site';
+const cats = countBy(await getPosts(), 'categories');
+---
+<Base title="Categories" description="Browse Senpai Club articles by category.">
+  <div class="container page">
+    <p class="eyebrow"><span class="jp" lang="ja">分類</span>Browse</p>
+    <h1>Categories</h1>
+    <div class="cloud">{cats.map((c) => <a class="pill" href={`/categories/${c.slug}/`}>{CATEGORY_LABELS[c.name] ?? c.name} <span class="count">{c.count}</span></a>)}</div>
+  </div>
+</Base>
+<style>
+  .page { padding-top: 3rem; max-width: 52rem; }
+  h1 { font-size: clamp(2rem, 4vw, 2.75rem); margin: 0.4rem 0 1.5rem; }
+  .cloud { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .pill { font-size: 0.9rem; padding: 0.4rem 0.9rem; }
+</style>

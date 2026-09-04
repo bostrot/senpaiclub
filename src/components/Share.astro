@@ -1,0 +1,35 @@
+---
+interface Props { title: string; url: string; }
+const { title, url } = Astro.props;
+const t = encodeURIComponent(title), u = encodeURIComponent(url);
+const links = [
+  { label: 'X', href: `https://twitter.com/intent/tweet?text=${t}&url=${u}` },
+  { label: 'LinkedIn', href: `https://www.linkedin.com/sharing/share-offsite/?url=${u}` },
+  { label: 'Hacker News', href: `https://news.ycombinator.com/submitlink?u=${u}&t=${t}` },
+  { label: 'Reddit', href: `https://www.reddit.com/submit?url=${u}&title=${t}` },
+  { label: 'Telegram', href: `https://t.me/share/url?url=${u}&text=${t}` },
+];
+---
+<div class="share">
+  <span class="label">Share</span>
+  {links.map((l) => <a class="pill" href={l.href} target="_blank" rel="noopener noreferrer">{l.label}</a>)}
+  <button type="button" class="pill" data-copy={url}>Copy link</button>
+</div>
+
+<style>
+  .share { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; }
+  .label { font-size: 0.85rem; color: var(--fg-faint); margin-right: 0.25rem; }
+  button.pill { cursor: pointer; }
+</style>
+
+<script>
+  document.addEventListener('click', async (e) => {
+    const btn = (e.target as HTMLElement).closest<HTMLButtonElement>('[data-copy]');
+    if (!btn) return;
+    try {
+      await navigator.clipboard.writeText(btn.dataset.copy!);
+      const old = btn.textContent; btn.textContent = 'Copied!';
+      setTimeout(() => (btn.textContent = old), 1500);
+    } catch {}
+  });
+</script>

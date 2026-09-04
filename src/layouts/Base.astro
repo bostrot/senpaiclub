@@ -1,0 +1,101 @@
+---
+import { ClientRouter } from 'astro:transitions';
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import SearchModal from '../components/SearchModal.astro';
+import { SITE } from '../data/site';
+
+interface Props {
+  title?: string;
+  /** Plain page title for og:title (giscus maps discussions by title). */
+  ogTitle?: string;
+  description?: string;
+  image?: string;
+  type?: 'website' | 'article';
+  published?: Date;
+  modified?: Date;
+  tags?: string[];
+  author?: string;
+  noindex?: boolean;
+}
+const { title, ogTitle, description = SITE.description, image, type = 'website', published, modified, tags, author, noindex } = Astro.props;
+const fullTitle = title ? `${title} | ${SITE.title}` : `${SITE.title} — ${SITE.tagline}`;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const ogImage = new URL(image ?? '/og/default.png', Astro.site);
+
+const jsonLd = type === 'article'
+  ? {
+      '@context': 'https://schema.org', '@type': 'BlogPosting',
+      headline: ogTitle ?? title, description, image: ogImage.href,
+      datePublished: published?.toISOString(), dateModified: (modified ?? published)?.toISOString(),
+      author: { '@type': 'Person', name: author ?? SITE.author },
+      publisher: { '@type': 'Organization', name: SITE.title, logo: { '@type': 'ImageObject', url: new URL('/assets/img/favicons/android-icon-192x192.png', Astro.site).href } },
+      mainEntityOfPage: canonical.href, keywords: tags?.join(', '),
+    }
+  : { '@context': 'https://schema.org', '@type': 'WebSite', name: SITE.title, url: SITE.url, description: SITE.description };
+---
+<html lang={SITE.lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical.href} />
+    {noindex && <meta name="robots" content="noindex" />}
+    <meta name="generator" content={Astro.generator} />
+    <meta name="theme-color" content="#fbfaf8" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0d0f13" media="(prefers-color-scheme: dark)" />
+
+    <meta property="og:site_name" content={SITE.title} />
+    <meta property="og:type" content={type} />
+    <meta property="og:title" content={ogTitle ?? title ?? SITE.title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical.href} />
+    <meta property="og:image" content={ogImage.href} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={ogTitle ?? title ?? SITE.title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage.href} />
+    {published && <meta property="article:published_time" content={published.toISOString()} />}
+    {modified && <meta property="article:modified_time" content={modified.toISOString()} />}
+    {tags?.map((t) => <meta property="article:tag" content={t} />)}
+
+    <link rel="icon" href="/assets/img/favicons/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicons/favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicons/apple-icon-180x180.png" />
+    <link rel="alternate" type="application/rss+xml" title={SITE.title} href="/feed.xml" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+    <script is:inline>
+      (function () {
+        function apply() {
+          var s = null;
+          try { s = localStorage.getItem('theme'); } catch (e) {}
+          var t = s === 'light' || s === 'dark' ? s : (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+          document.documentElement.setAttribute('data-theme', t);
+        }
+        apply();
+        document.addEventListener('astro:after-swap', apply);
+      })();
+    </script>
+    <ClientRouter />
+  </head>
+  <body>
+    <a href="#main" class="skip">Skip to content</a>
+    <Header />
+    <main id="main">
+      <slot />
+    </main>
+    <Footer />
+    <SearchModal />
+    <style is:global>
+      .skip { position: absolute; left: 1rem; top: -4rem; z-index: 100; padding: 0.5rem 1rem; background: var(--accent); color: var(--accent-fg); border-radius: 8px; }
+      .skip:focus { top: 1rem; }
+      main { flex: 1; }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+<div id="search" class="search" hidden>
+  <div class="backdrop" data-search-close></div>
+  <div class="panel card" role="dialog" aria-modal="true" aria-label="Search">
+    <div id="pagefind-ui"></div>
+    <p class="hint">Press <kbd>Esc</kbd> to close</p>
+  </div>
+</div>
+
+<style is:global>
+  .search[hidden] { display: none; }
+  .search { position: fixed; inset: 0; z-index: 100; display: grid; place-items: start center; padding: 10vh 1rem; }
+  .search .backdrop { position: absolute; inset: 0; background: rgb(0 0 0 / 0.45); backdrop-filter: blur(4px); }
+  .search .panel { position: relative; width: min(100%, 44rem); max-height: 75vh; overflow: auto; padding: 1rem 1.25rem; box-shadow: var(--shadow-lg); }
+  .search .hint { margin: 0.75rem 0 0; font-size: 0.75rem; color: var(--fg-faint); text-align: right; }
+  .search kbd { font-family: var(--font-mono); border: 1px solid var(--border); border-radius: 4px; padding: 0 0.3em; }
+  #pagefind-ui { --pagefind-ui-scale: 0.9; --pagefind-ui-primary: var(--accent); --pagefind-ui-text: var(--fg); --pagefind-ui-background: var(--bg-elevated); --pagefind-ui-border: var(--border); --pagefind-ui-tag: var(--bg-subtle); --pagefind-ui-border-width: 1px; --pagefind-ui-border-radius: 10px; --pagefind-ui-font: var(--font-sans); }
+  #pagefind-ui .pagefind-ui__search-input { font-weight: 500; }
+  #pagefind-ui .pagefind-ui__result-title a { color: var(--fg); }
+  #pagefind-ui .pagefind-ui__result-excerpt { color: var(--fg-muted); }
+  #pagefind-ui mark { background: var(--accent-soft); color: var(--accent); border-radius: 3px; padding: 0 0.15em; }
+  #pagefind-ui .pagefind-ui__message { color: var(--fg-muted); }
+  #pagefind-ui .pagefind-ui__button { background: var(--bg-subtle); color: var(--fg); }
+</style>
+
+<script>
+  let loaded = false;
+  let ui: any = null;
+
+  async function load() {
+    if (loaded) return;
+    loaded = true;
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = '/pagefind/pagefind-ui.css';
+    document.head.appendChild(link);
+    await new Promise<void>((resolve, reject) => {
+      const s = document.createElement('script');
+      s.src = '/pagefind/pagefind-ui.js';
+      s.onload = () => resolve();
+      s.onerror = () => reject(new Error('pagefind missing (run a production build)'));
+      document.head.appendChild(s);
+    }).catch((e) => {
+      const el = document.getElementById('pagefind-ui');
+      if (el) el.textContent = e.message;
+      return;
+    });
+    // @ts-ignore
+    if (window.PagefindUI) {
+      // @ts-ignore
+      ui = new window.PagefindUI({ element: '#pagefind-ui', showSubResults: true, showImages: false, resetStyles: false, autofocus: true });
+    }
+  }
+
+  function open() {
+    const root = document.getElementById('search');
+    if (!root) return;
+    root.hidden = false;
+    document.body.style.overflow = 'hidden';
+    load().then(() => {
+      const input = root.querySelector<HTMLInputElement>('input');
+      input?.focus();
+    });
+  }
+  function close() {
+    const root = document.getElementById('search');
+    if (!root) return;
+    root.hidden = true;
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('click', (e) => {
+    const t = e.target as HTMLElement;
+    if (t.closest('[data-search-open]')) open();
+    else if (t.closest('[data-search-close]')) close();
+  });
+  document.addEventListener('keydown', (e) => {
+    if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') { e.preventDefault(); open(); }
+    else if (e.key === '/' && !(e.target as HTMLElement).matches('input, textarea, [contenteditable]')) { e.preventDefault(); open(); }
+    else if (e.key === 'Escape') close();
+  });
+  // Pagefind's script tag survives swaps; the container does not. Re-mount after navigation.
+  document.addEventListener('astro:after-swap', () => { loaded = false; ui = null; });
+</script>

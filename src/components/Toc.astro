@@ -1,0 +1,59 @@
+---
+import type { MarkdownHeading } from 'astro';
+interface Props { headings: MarkdownHeading[]; }
+const headings = Astro.props.headings.filter((h) => h.depth >= 2 && h.depth <= 3);
+---
+{headings.length > 2 && (
+  <details class="toc" data-toc>
+    <summary class="toc-title">On this page</summary>
+    <ol>
+      {headings.map((h) => (
+        <li class={`d${h.depth}`}><a href={`#${h.slug}`}>{h.text}</a></li>
+      ))}
+    </ol>
+  </details>
+)}
+
+<style>
+  .toc { font-size: 0.85rem; }
+  .toc-title { cursor: pointer; list-style: none; display: flex; align-items: center; gap: 0.4rem; margin: 0 0 0.6rem; font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--fg-faint); }
+  .toc-title::-webkit-details-marker { display: none; }
+  .toc-title::before { content: ''; width: 0.4em; height: 0.4em; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(-45deg); transition: transform 0.15s; }
+  .toc[open] .toc-title::before { transform: rotate(45deg); }
+  @media (max-width: 960px) { .toc { border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 0.75rem 1rem; background: var(--bg-elevated); } .toc[open] .toc-title { margin-bottom: 0.75rem; } .toc-title { margin: 0; } }
+  ol { list-style: none; margin: 0; padding: 0; border-left: 1px solid var(--border); }
+  li a { display: block; padding: 0.3rem 0 0.3rem 0.9rem; margin-left: -1px; border-left: 1px solid transparent; color: var(--fg-muted); line-height: 1.4; transition: color 0.15s, border-color 0.15s; }
+  li.d3 a { padding-left: 1.7rem; font-size: 0.8rem; }
+  li a:hover { color: var(--fg); }
+  li a.active { color: var(--accent); border-left-color: var(--accent); font-weight: 500; }
+</style>
+
+<script>
+  function init() {
+    const toc = document.querySelector<HTMLDetailsElement>('[data-toc]');
+    if (!toc) return;
+    if (window.matchMedia('(min-width: 961px)').matches) toc.open = true;
+    const links = [...toc.querySelectorAll<HTMLAnchorElement>('a')];
+    const targets = links.map((a) => document.getElementById(decodeURIComponent(a.hash.slice(1)))).filter(Boolean) as HTMLElement[];
+    if (!targets.length) return;
+    let active: HTMLAnchorElement | null = null;
+    const set = (id: string) => {
+      const a = links.find((l) => decodeURIComponent(l.hash.slice(1)) === id) ?? null;
+      if (a === active) return;
+      active?.classList.remove('active');
+      a?.classList.add('active');
+      active = a;
+    };
+    const obs = new IntersectionObserver(
+      (entries) => {
+        const visible = entries.filter((e) => e.isIntersecting).sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+        if (visible[0]) set(visible[0].target.id);
+      },
+      { rootMargin: '-80px 0px -70% 0px', threshold: [0, 1] },
+    );
+    targets.forEach((t) => obs.observe(t));
+    set(targets[0].id);
+  }
+  init();
+  document.addEventListener('astro:page-load', init);
+</script>

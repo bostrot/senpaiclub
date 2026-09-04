@@ -1,0 +1,47 @@
+---
+import { SITE } from '../data/site';
+const g = SITE.giscus;
+---
+<section class="comments" aria-label="Comments">
+  <h2 class="section-title"><span class="jp" lang="ja">会話</span>Comments</h2>
+  <div
+    id="giscus-host"
+    data-repo={g.repo}
+    data-repo-id={g.repoId}
+    data-category={g.category}
+    data-category-id={g.categoryId}
+    data-mapping={g.mapping}
+  ></div>
+</section>
+
+<style>
+  .comments { margin-top: 3.5rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+  .comments h2 { margin-bottom: 1rem; }
+</style>
+
+<script>
+  const theme = () => (document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark_dimmed' : 'light');
+
+  function mount() {
+    const host = document.getElementById('giscus-host');
+    if (!host || host.querySelector('script, iframe')) return;
+    const s = document.createElement('script');
+    s.src = 'https://giscus.app/client.js';
+    s.async = true;
+    s.crossOrigin = 'anonymous';
+    const attrs: Record<string, string> = {
+      'data-repo': host.dataset.repo!, 'data-repo-id': host.dataset.repoId!,
+      'data-category': host.dataset.category!, 'data-category-id': host.dataset.categoryId!,
+      'data-mapping': host.dataset.mapping!, 'data-strict': '0', 'data-reactions-enabled': '1',
+      'data-emit-metadata': '0', 'data-input-position': 'top', 'data-theme': theme(), 'data-lang': 'en', 'data-loading': 'lazy',
+    };
+    for (const [k, v] of Object.entries(attrs)) s.setAttribute(k, v);
+    host.appendChild(s);
+  }
+  mount();
+  document.addEventListener('astro:page-load', mount);
+  document.addEventListener('themechange', () => {
+    const iframe = document.querySelector<HTMLIFrameElement>('iframe.giscus-frame');
+    iframe?.contentWindow?.postMessage({ giscus: { setConfig: { theme: theme() } } }, 'https://giscus.app');
+  });
+</script>

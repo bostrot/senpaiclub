@@ -1,0 +1,35 @@
+{
+  "name": "senpaiclub",
+  "type": "module",
+  "version": "2.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build && pagefind --site dist",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/markdown-remark": "^7.3.0",
+    "@astrojs/rss": "^4.0.19",
+    "@astrojs/sitemap": "^3.7.4",
+    "@expressive-code/plugin-line-numbers": "^0.44.2",
+    "@fontsource-variable/inter": "^5.3.0",
+    "@fontsource-variable/jetbrains-mono": "^5.3.0",
+    "@fontsource-variable/space-grotesk": "^5.3.0",
+    "@fontsource/inter": "^5.3.0",
+    "@fontsource/shippori-mincho": "^5.3.0",
+    "@fontsource/space-grotesk": "^5.3.0",
+    "@resvg/resvg-js": "^2.6.2",
+    "astro": "^7.3.1",
+    "astro-expressive-code": "^0.44.2",
+    "mdast-util-to-string": "^4.0.0",
+    "pagefind": "^1.5.2",
+    "reading-time": "^1.5.0",
+    "satori": "^0.33.4",
+    "sharp": "^0.35.4"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true
+  }
+}

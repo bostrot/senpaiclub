@@ -1,0 +1,64 @@
+---
+import type { Post } from '../lib/posts';
+import { excerpt, fmtDate, readTime, slugify } from '../lib/posts';
+import { AUTHORS, CATEGORY_LABELS } from '../data/site';
+import Cover from './Cover.astro';
+
+interface Props { post: Post; featured?: boolean; eager?: boolean; }
+const { post, featured = false, eager = false } = Astro.props;
+const cat = post.data.categories[0];
+const author = AUTHORS[post.data.author];
+const rt = readTime(post);
+---
+<article class:list={['post-card', { featured }]}>
+  <a href={`/${post.id}/`} class="link" aria-label={post.data.title}></a>
+  <Cover post={post} eager={eager} />
+  <div class="body">
+    <div class="meta">
+      {cat && <a href={`/categories/${slugify(cat)}/`} class="cat">{CATEGORY_LABELS[cat] ?? cat}</a>}
+      <time datetime={post.data.date.toISOString()}>{fmtDate(post.data.date)}</time>
+      <span class="dot">·</span>
+      <span>{rt.minutes} min read</span>
+    </div>
+    <h3 class="title"><a href={`/${post.id}/`}>{post.data.title}</a></h3>
+    <p class="excerpt">{excerpt(post, featured ? 320 : 140)}</p>
+    <div class="foot">
+      {author && <span class="author"><span class="avatar" aria-hidden="true">{author.initials}</span>{author.name}</span>}
+      <div class="tags">
+        {post.data.tags.slice(0, featured ? 5 : 3).map((t) => <a class="tag" href={`/tags/${slugify(t)}/`}>#{t}</a>)}
+      </div>
+    </div>
+  </div>
+</article>
+
+<style>
+  .post-card {
+    position: relative; display: flex; flex-direction: column;
+    background: var(--bg-elevated); border: 1px solid var(--border); border-radius: var(--radius);
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  }
+  .post-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); border-color: var(--border-strong); }
+  .link { position: absolute; inset: 0; z-index: 1; border-radius: inherit; }
+  .body { display: flex; flex-direction: column; gap: 0.6rem; padding: 1.1rem 1.35rem 1.25rem; flex: 1; }
+  .meta, .foot, .cat, .tag, .title a { position: relative; z-index: 2; }
+  .meta { display: flex; align-items: center; gap: 0.5rem; font-size: 0.78rem; color: var(--fg-faint); font-variant-numeric: tabular-nums; }
+  .cat { font-family: var(--font-mono); font-size: 0.68rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); background: var(--accent-soft); padding: 0.2rem 0.5rem; border-radius: 6px; }
+  .title { font-size: 1.15rem; line-height: 1.3; }
+  .title a:hover { color: var(--accent); }
+  .excerpt { margin: 0; color: var(--fg-muted); font-size: 0.925rem; line-height: 1.6; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .foot { margin-top: auto; padding-top: 0.75rem; display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; flex-wrap: wrap; font-size: 0.78rem; color: var(--fg-muted); }
+  .author { display: inline-flex; align-items: center; gap: 0.45rem; }
+  .avatar { display: inline-grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; background: var(--bg-subtle); border: 1px solid var(--border); font-family: var(--font-mono); font-size: 0.6rem; font-weight: 700; color: var(--fg-muted); }
+  .tags { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+  .tag { color: var(--fg-faint); font-family: var(--font-mono); font-size: 0.72rem; }
+  .tag:hover { color: var(--accent); }
+
+  /* Featured: cover on the left, text on the right */
+  .featured { display: grid; grid-template-columns: 1.25fr 1fr; }
+  .featured :global(.cover) { aspect-ratio: 16 / 9; height: 100%; border-bottom: 0; border-right: 1px solid var(--border); }
+  .featured .body { padding: 1.75rem 1.9rem; gap: 0.8rem; justify-content: center; }
+  .featured .title { font-size: clamp(1.4rem, 2.2vw, 1.85rem); }
+  .featured .excerpt { -webkit-line-clamp: 6; font-size: 1rem; line-height: 1.7; }
+  @media (max-width: 720px) { .featured { grid-template-columns: 1fr; } .featured :global(.cover) { aspect-ratio: 16 / 10; min-height: 0; border-right: 0; border-bottom: 1px solid var(--border); } }
+</style>

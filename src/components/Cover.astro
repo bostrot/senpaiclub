@@ -1,0 +1,108 @@
+---
+/**
+ * Post cover. Uses the post's photo when it has one, otherwise a generated
+ * kanji card with a traditional Japanese pattern. Every cover carries the seal.
+ */
+import type { Post } from '../lib/posts';
+import { coverStyle, kanjiFor } from '../lib/kanji';
+
+interface Props { post: Post; variant?: 'card' | 'wide' | 'hero'; eager?: boolean; }
+const { post, variant = 'card', eager = false } = Astro.props;
+const { kanji, meaning } = kanjiFor(post);
+const { tint, pattern } = coverStyle(post);
+const image = post.data.image;
+const uid = `p-${pattern}-${post.id.slice(0, 12).replace(/[^a-z0-9]/g, '')}`;
+const W = 640, H = variant === 'wide' ? 240 : 400;
+---
+<div class:list={['cover', variant, { photo: !!image }]} style={`--tint:${tint.hex}`} aria-hidden="true">
+  {image ? (
+    <img src={image} alt="" loading={eager ? 'eager' : 'lazy'} decoding="async" />
+  ) : (
+    <svg viewBox={`0 0 ${W} ${H}`} preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        {pattern === 'seigaiha' && (
+          <pattern id={uid} width="80" height="40" patternUnits="userSpaceOnUse">
+            <g fill="none" stroke="var(--tint)" stroke-width="1.5">
+              <circle cx="40" cy="40" r="36" /><circle cx="40" cy="40" r="26" /><circle cx="40" cy="40" r="16" /><circle cx="40" cy="40" r="6" />
+              <circle cx="0" cy="20" r="36" /><circle cx="0" cy="20" r="26" /><circle cx="0" cy="20" r="16" /><circle cx="0" cy="20" r="6" />
+              <circle cx="80" cy="20" r="36" /><circle cx="80" cy="20" r="26" /><circle cx="80" cy="20" r="16" /><circle cx="80" cy="20" r="6" />
+              <circle cx="40" cy="0" r="36" /><circle cx="40" cy="0" r="26" /><circle cx="40" cy="0" r="16" /><circle cx="40" cy="0" r="6" />
+            </g>
+          </pattern>
+        )}
+        {pattern === 'asanoha' && (
+          <pattern id={uid} width="60" height="104" patternUnits="userSpaceOnUse">
+            <g fill="none" stroke="var(--tint)" stroke-width="1.2">
+              <path d="M30 0 L60 17.3 L60 51.9 L30 69.2 L0 51.9 L0 17.3 Z M30 0 V69.2 M0 17.3 L60 51.9 M60 17.3 L0 51.9 M30 34.6 L0 17.3 M30 34.6 L60 17.3 M30 34.6 L0 51.9 M30 34.6 L60 51.9 M30 34.6 V0 M30 34.6 V69.2" />
+              <path d="M30 69.2 L60 86.5 L60 121 L30 138 L0 121 L0 86.5 Z M30 69.2 V138 M0 86.5 L60 121 M60 86.5 L0 121 M30 104 L0 86.5 M30 104 L60 86.5 M30 104 L0 121 M30 104 L60 121" />
+            </g>
+          </pattern>
+        )}
+        {pattern === 'shippo' && (
+          <pattern id={uid} width="48" height="48" patternUnits="userSpaceOnUse">
+            <g fill="none" stroke="var(--tint)" stroke-width="1.4">
+              <circle cx="24" cy="24" r="24" /><circle cx="0" cy="0" r="24" /><circle cx="48" cy="0" r="24" /><circle cx="0" cy="48" r="24" /><circle cx="48" cy="48" r="24" />
+            </g>
+          </pattern>
+        )}
+        {pattern === 'kikko' && (
+          <pattern id={uid} width="52" height="90" patternUnits="userSpaceOnUse">
+            <g fill="none" stroke="var(--tint)" stroke-width="1.4">
+              <path d="M26 0 L52 15 L52 45 L26 60 L0 45 L0 15 Z" /><path d="M26 30 L52 45 L52 75 L26 90 L0 75 L0 45 Z" transform="translate(26 -15)" /><path d="M26 30 L52 45 L52 75 L26 90 L0 75 L0 45 Z" transform="translate(-26 -15)" />
+              <path d="M26 60 L52 75 L52 105 L26 120 L0 105 L0 75 Z" />
+            </g>
+          </pattern>
+        )}
+        {pattern === 'sayagata' && (
+          <pattern id={uid} width="40" height="40" patternUnits="userSpaceOnUse">
+            <g fill="none" stroke="var(--tint)" stroke-width="1.4">
+              <path d="M0 10 H10 V0 M20 0 V10 H30 V20 H40 M10 20 H20 V30 H10 V40 M30 30 H40 M30 30 V40 M0 30 H10 M20 20 V10" />
+            </g>
+          </pattern>
+        )}
+        {pattern === 'stripes' && (
+          <pattern id={uid} width="16" height="16" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+            <line x1="0" y1="0" x2="0" y2="16" stroke="var(--tint)" stroke-width="1.4" />
+            <line x1="8" y1="0" x2="8" y2="16" stroke="var(--tint)" stroke-width="0.6" />
+          </pattern>
+        )}
+        <linearGradient id={`${uid}-g`} x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="var(--tint)" stop-opacity="0.22" />
+          <stop offset="1" stop-color="var(--tint)" stop-opacity="0.04" />
+        </linearGradient>
+        <filter id={`${uid}-grain`}>
+          <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" />
+          <feColorMatrix type="saturate" values="0" />
+          <feComponentTransfer><feFuncA type="linear" slope="0.08" /></feComponentTransfer>
+        </filter>
+      </defs>
+      <rect width={W} height={H} fill="var(--cover-bg)" />
+      <rect width={W} height={H} fill={`url(#${uid}-g)`} />
+      <rect width={W} height={H} fill={`url(#${uid})`} opacity="0.5" />
+      <rect width={W} height={H} filter={`url(#${uid}-grain)`} />
+      <text x={W - 36} y={H / 2} text-anchor="end" dominant-baseline="central" font-family="var(--font-jp)" font-weight="800" font-size={variant === 'wide' ? 180 : 250} fill="var(--tint)" fill-opacity="0.92">{kanji}</text>
+      {meaning && <text x="36" y="44" font-family="var(--font-mono)" font-size="14" letter-spacing="3" fill="var(--tint)" fill-opacity="0.8">{meaning.toUpperCase()}</text>}
+    </svg>
+  )}
+  <span class="seal" lang="ja">先輩</span>
+</div>
+
+<style>
+  .cover { position: relative; overflow: hidden; aspect-ratio: 16 / 10; background: var(--bg-subtle); --cover-bg: var(--bg-subtle); border-bottom: 1px solid var(--border); }
+  .cover.wide { aspect-ratio: 21 / 8; border: 1px solid var(--border); border-radius: var(--radius); }
+  .cover.hero { aspect-ratio: 16 / 9; border: 1px solid var(--border); border-radius: var(--radius); }
+  .cover svg, .cover img { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+  .cover img { object-fit: cover; transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1); }
+  :global(.post-card:hover) .cover img { transform: scale(1.04); }
+  .photo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, rgb(0 0 0 / 0.35)); pointer-events: none; }
+  .seal {
+    position: absolute; left: 0.9rem; bottom: 0.9rem; z-index: 2;
+    display: grid; place-items: center; width: 2rem; height: 2rem;
+    font-family: var(--font-jp); font-weight: 800; font-size: 0.72rem; line-height: 1; letter-spacing: -0.02em;
+    color: #fff; background: var(--accent); border-radius: 4px;
+    writing-mode: vertical-rl; text-orientation: upright;
+    box-shadow: 0 1px 0 rgb(0 0 0 / 0.15);
+  }
+  .wide .seal, .hero .seal { width: 2.4rem; height: 2.4rem; font-size: 0.85rem; left: 1.25rem; bottom: 1.25rem; }
+  :global([data-theme='dark']) .cover { --cover-bg: #14171d; }
+</style>

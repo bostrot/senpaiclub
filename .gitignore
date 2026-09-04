@@ -1,24 +1,8 @@
-# Bundler cache
-.bundle
-vendor
-Gemfile.lock
-
-.obsidian
-
-# Jekyll cache
-.jekyll-cache
-_site
-
-# RubyGems
-*.gem
-
-# NPM dependencies
 node_modules
-package-lock.json
-
-# IDE configurations
+dist
+.astro
+.DS_Store
+.obsidian
 .idea
 .vscode
-
-# Misc
-assets/js/dist
+*.log
