@@ -191,6 +191,21 @@ While the doorbell points at Home Assistant, the vendor app is dead. Restoring t
 - **Mirror, do not improve.** A more correct SIP response broke registration. Embedded SIP stacks are string matchers, not RFC implementations.
 - **Config files beat APIs.** Half the integration's features are "write a JSON file over FTP and reboot". Boring, robust, no protocol to break.
 
+## Get the integration
+
+Everything described here is packaged as a Home Assistant custom integration, MIT licensed:
+
+**→ [github.com/bostrot/hacs-dx482-doorbell](https://github.com/bostrot/hacs-dx482-doorbell)**
+
+Install it through HACS by adding the repository as a custom repository (category
+*Integration*), then add **DX482 Doorbell** from *Settings → Devices & Services*. The
+README covers the setup fields, the one-time "point the doorbell at Home Assistant"
+step and the ports Home Assistant needs to bind.
+
+Bug reports, packet captures and pull requests are welcome in the
+[issue tracker](https://github.com/bostrot/hacs-dx482-doorbell/issues) — especially from
+anyone running a different monitor from the family below.
+
 ## Other devices
 
 The integration has nothing DX482-specific in it. Anything from Video-Tech that uses the VDP Connect app and the same cloud address should work: the CDVI CDV-47DX and CDV-470DX rebrands, the older DX471, DX470 and DX47 on firmware V1.8 or newer, the DH473 in its VDP Connect variant, and possibly the Ethernet IX series. None are confirmed. If you own one, there is a [device report template](https://github.com/bostrot/hacs-dx482-doorbell/issues/new?template=device-report.yml) in the repo, and a checklist in the README to see whether yours is a candidate.
