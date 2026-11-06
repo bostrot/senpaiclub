@@ -2,7 +2,6 @@ import type { APIRoute } from 'astro';
 import { fmtDate, getPosts, readTime } from '../../lib/posts';
 import { AUTHORS, CATEGORY_LABELS, SITE } from '../../data/site';
 import { ogImage, type OgOpts } from '../../lib/og';
-import { coverStyle, kanjiFor } from '../../lib/kanji';
 
 export async function getStaticPaths() {
   const posts = await getPosts();
@@ -14,8 +13,6 @@ export async function getStaticPaths() {
         title: p.data.title,
         subtitle: p.data.categories[0] ? (CATEGORY_LABELS[p.data.categories[0]] ?? p.data.categories[0]) : undefined,
         meta: [AUTHORS[p.data.author]?.name, fmtDate(p.data.date), `${readTime(p).minutes} min read`].filter(Boolean).join('  ·  '),
-        kanji: kanjiFor(p).kanji,
-        tint: coverStyle(p).tint.hex,
       },
     })),
   ];
