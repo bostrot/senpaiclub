@@ -3,7 +3,7 @@ import { SITE } from '../data/site';
 const g = SITE.giscus;
 ---
 <section class="comments" aria-label="Comments">
-  <h2 class="section-title"><span class="jp" lang="ja">会話</span>Comments</h2>
+  <h2 class="section-label">Comments</h2>
   <div
     id="giscus-host"
     data-repo={g.repo}
@@ -15,8 +15,7 @@ const g = SITE.giscus;
 </section>
 
 <style>
-  .comments { margin-top: 3.5rem; padding-top: 2rem; border-top: 1px solid var(--border); }
-  .comments h2 { margin-bottom: 1rem; }
+  .comments { padding-top: 1.5rem; border-top: 1px solid var(--border); }
 </style>
 
 <script>

@@ -23,7 +23,7 @@ export default defineConfig({
         overridesByLang: { 'bash,sh,shell,fish,zsh,console,powershell,ps1': { showLineNumbers: false } },
       },
       styleOverrides: {
-        borderRadius: '0.75rem',
+        borderRadius: '4px',
         borderColor: 'var(--border)',
         codeFontFamily: 'var(--font-mono)',
         codeFontSize: '0.875rem',

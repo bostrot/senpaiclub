@@ -44,8 +44,8 @@ const jsonLd = type === 'article'
     <link rel="canonical" href={canonical.href} />
     {noindex && <meta name="robots" content="noindex" />}
     <meta name="generator" content={Astro.generator} />
-    <meta name="theme-color" content="#fbfaf8" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#0d0f13" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#fcfcfa" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#151514" media="(prefers-color-scheme: dark)" />
 
     <meta property="og:site_name" content={SITE.title} />
     <meta property="og:type" content={type} />
@@ -96,7 +96,7 @@ const jsonLd = type === 'article'
     <Footer />
     <SearchModal />
     <style is:global>
-      .skip { position: absolute; left: 1rem; top: -4rem; z-index: 100; padding: 0.5rem 1rem; background: var(--accent); color: var(--accent-fg); border-radius: 8px; }
+      .skip { position: absolute; left: 1rem; top: -4rem; z-index: 100; padding: 0.5rem 1rem; background: var(--fg); color: var(--bg); }
       .skip:focus { top: 1rem; }
       main { flex: 1; }
     </style>

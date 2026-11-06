@@ -10,16 +10,17 @@ const links = [
   { label: 'Telegram', href: `https://t.me/share/url?url=${u}&text=${t}` },
 ];
 ---
-<div class="share">
-  <span class="label">Share</span>
-  {links.map((l) => <a class="pill" href={l.href} target="_blank" rel="noopener noreferrer">{l.label}</a>)}
-  <button type="button" class="pill" data-copy={url}>Copy link</button>
-</div>
+<p class="share">
+  Share:
+  {links.map((l) => <a href={l.href} target="_blank" rel="noopener noreferrer">{l.label}</a>)}
+  <button type="button" data-copy={url}>Copy link</button>
+</p>
 
 <style>
-  .share { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; }
-  .label { font-size: 0.85rem; color: var(--fg-faint); margin-right: 0.25rem; }
-  button.pill { cursor: pointer; }
+  .share { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.3rem 0.9rem; margin: 0; font-size: 0.875rem; color: var(--fg-faint); }
+  a, button { color: var(--fg-muted); text-decoration: none; }
+  a:hover, button:hover { color: var(--fg); text-decoration: underline; }
+  button { padding: 0; border: 0; background: none; font-size: inherit; cursor: pointer; }
 </style>
 
 <script>
